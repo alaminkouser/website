@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "build": "deno run --allow-all main.ts"
+  },
+  "imports": {
+    "@marked": "npm:marked",
+    "@pagefind": "npm:pagefind",
+    "@gfmHeadingId": "npm:marked-gfm-heading-id",
+    "@gray-matter": "npm:gray-matter",
+    "@handlebars": "npm:handlebars"
+  }
+}

@@ -1,0 +1,6 @@
+fastapi[standard]
+minify-html
+aiohttp
+firebase-admin
+sshsig
+redis

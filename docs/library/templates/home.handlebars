@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% with title = "{{title}}" %} {% include "templates/head.html" %} {% endwith %}
+  </head>
+  <body>
+    {% include "templates/nav.html" %}
+    <main>
+      <h1>{{title}}</h1>
+      <section>
+        {{#each pages}}
+          <article>
+            <header>
+              <h2>
+                <a href="/docs{{this.path}}">{{this.title}}</a>
+              </h2>
+              <p>
+                <time datetime="{{this.dateISO}}">
+                  <strong>{{this.dateFormatted}}</strong>
+                </time>
+              </p>
+            </header>
+
+            <p>{{this.excerpt}}</p>
+
+            <footer>
+              {{#if this.keywords.length}}
+                <p>
+                  <small>Keywords:
+                    {{#each this.keywords}}
+                      <a href="/docs/keywords/{{this}}/">{{this}}</a>{{#unless @last}}, {{/unless}}
+                    {{/each}}
+                  </small>
+                </p>
+              {{/if}}
+            </footer>
+            {{#unless @last}}
+              <hr />
+            {{/unless}}
+          </article>
+        {{/each}}
+      </section>
+    </main>
+    {% include "templates/footer.html" %}
+  </body>
+</html>

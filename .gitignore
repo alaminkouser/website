@@ -1,0 +1,23 @@
+# dotenv environment variables file
+.env
+
+# python files
+__pycache__
+
+# For Prettier
+node_modules
+
+# For docs
+docs/deno.lock
+docs/public
+app/home/docs
+
+# package-lock.json
+package-lock.json
+
+# jampack
+.jampack
+
+# resume exported files
+resume/main.pdf
+app/home/resume.pdf
