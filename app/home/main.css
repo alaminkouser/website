@@ -128,7 +128,7 @@ body > *:not(nav):not(footer):not(link):not(script) {
   #NAVIGATION_BAR .nav-menu {
     flex-direction: column;
     width: 100%;
-    background: #000000;
+    background: #000;
     position: absolute;
     left: 0;
     top: 100%;
@@ -181,7 +181,7 @@ body > *:not(nav):not(footer):not(link):not(script) {
 }
 
 #FOOTER {
-  background: #000000;
+  background: #000;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -203,6 +203,12 @@ body > *:not(nav):not(footer):not(link):not(script) {
 #FOOTER .footer-container a {
   text-decoration: none;
   color: #fff;
+}
+
+#FOOTER .footer-container .footer-content hr {
+  border: 1px dashed #888;
+  margin-top: 1ch;
+  margin-bottom: 1ch;
 }
 
 @media (max-width: 768px) {
