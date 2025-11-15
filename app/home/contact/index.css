@@ -3,15 +3,18 @@ main {
   margin: 0 auto;
 }
 
+main h1 {
+  margin-bottom: 1.5em;
+}
+
+main p {
+  margin: 1em 0;
+  line-height: 1.8;
+}
+
 main a {
   text-decoration: none;
   color: #000;
-}
-
-main a:hover {
-  text-decoration: underline;
-}
-
-main a:active {
-  text-decoration: underline;
+  display: inline-block;
+  margin: 0.5em 0;
 }
