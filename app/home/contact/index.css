@@ -1,0 +1,17 @@
+main {
+  padding: 2em;
+  margin: 0 auto;
+}
+
+main a {
+  text-decoration: none;
+  color: #000;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+main a:active {
+  text-decoration: underline;
+}

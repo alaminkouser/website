@@ -1,0 +1,42 @@
+from fastapi import FastAPI, Request
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import Response
+
+from app.tools.home import home
+from .routes.page import page_router
+from .tools.minify_middleware import MinifyMiddleware
+
+app = FastAPI(
+    title="main",
+    docs_url="/docs/",
+    redoc_url=None
+)
+
+app.add_middleware(MinifyMiddleware)
+
+app.add_middleware(
+    GZipMiddleware,
+    minimum_size=0,
+    compresslevel=9
+)
+
+app.include_router(
+    page_router,
+    prefix="",
+    tags=["page"],
+    include_in_schema=False
+)
+
+@app.exception_handler(RequestValidationError)
+async def request_validation_exception_handler(request: Request, exc: RequestValidationError):
+    reason = None
+    for error in exc.errors():
+        if "ctx" in error and "reason" in error["ctx"]:
+            reason = error["ctx"]["reason"]
+            break
+    error_html = home.get_template("error/index.html").render(
+        request=request,
+        reason=reason
+    )
+    return Response(content=error_html, media_type="text/html", status_code=422)

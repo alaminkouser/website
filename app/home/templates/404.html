@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% with title = "404" %} {% include "templates/head.html" %} {% endwith %}
+  </head>
+  <body>
+    {% include "templates/nav.html" %}
+    <main>
+      <h1>404</h1>
+      <p>Page not found: <strong>{{request.url}}</strong></p>
+    </main>
+    {% include "templates/footer.html" %}
+  </body>
+</html>

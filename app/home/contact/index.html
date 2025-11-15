@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% with title = "Contact" %} {% include "templates/head.html" %} {% endwith
+    %}
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    {% include "templates/nav.html" %}
+    <main>
+      <h1>Contact</h1>
+      <p>
+        <a href="mailto:contact@alaminkouser.com">contact@alaminkouser.com</a>
+        <br>
+        <a href="https://www.linkedin.com/in/alaminkouser"
+        >LinkedIn: alaminkouser</a>
+        <br>
+        <a href="https://github.com/alaminkouser">GitHub: alaminkouser</a>
+      </p>
+    </main>
+    {% include "templates/footer.html" %}
+  </body>
+</html>
