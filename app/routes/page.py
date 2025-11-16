@@ -13,7 +13,7 @@ def not_found(request: Request):
 def page(request: Request, path: str):
     if path.startswith("/templates/"):
         return not_found(request)
-
+    
     if path.endswith("/") and os.path.exists(f"app/home{path}index.html") and os.path.isfile(f"app/home{path}index.html"):
         html_string = home.get_template(f"{path}index.html").render(request=request)
         return Response(content=html_string, media_type="text/html")
