@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "noto";
-  src: url("/noto.ttf") format("truetype");
+  font-family: "main";
+  src: url("/main.ttf") format("truetype");
   font-display: swap;
 }
 
 * {
-  font-family: "noto", monospace;
+  font-family: "main", monospace;
 }
 
 html {
@@ -231,4 +231,11 @@ body > *:not(nav):not(footer):not(link):not(script) {
   body > *:not(nav):not(footer):not(link):not(script) {
     flex: none;
   }
+}
+
+main {
+  padding: 2em;
+  max-width: 80ch;
+  margin: 0 auto;
+  text-align: justify;
 }
