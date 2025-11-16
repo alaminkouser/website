@@ -47,11 +47,15 @@ body > *:not(nav):not(footer):not(link):not(script) {
 }
 
 #NAVIGATION_BAR .nav-brand {
-  color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0 1.5rem;
   line-height: 60px;
+}
+
+#NAVIGATION_BAR .nav-brand a {
+  text-decoration: none;
+  color: #fff;
 }
 
 #NAVIGATION_BAR .nav-menu {
