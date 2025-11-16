@@ -8,8 +8,8 @@
   font-family: "main", monospace;
 }
 
-html {
-  scrollbar-width: thin;
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
