@@ -1,17 +1,21 @@
 from fastapi import FastAPI, Request
+from .tools.quer_parameter_removal_middleware import QueryParameterRemovalMiddleware
+from .tools.minify_middleware import MinifyMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import Response
 
 from app.tools.home import home
 from .routes.page import page_router
-from .tools.minify_middleware import MinifyMiddleware
 
 app = FastAPI(
-    title="main",
-    docs_url="/docs/",
-    redoc_url=None
+    title="AL AMIN KOUSER",
+    docs_url=None,
+    redoc_url=None,
+    openapi_url=None
 )
+
+app.add_middleware(QueryParameterRemovalMiddleware)
 
 app.add_middleware(MinifyMiddleware)
 
