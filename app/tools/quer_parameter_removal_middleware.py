@@ -6,8 +6,7 @@ class QueryParameterRemovalMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request, call_next):
         if request.url.query:
             return RedirectResponse(
-                url=str(request.url.replace(query=None)),
-                status_code=307
+                url=str(request.url.replace(query=None)), status_code=307
             )
-        
+
         return await call_next(request)

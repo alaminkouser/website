@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    {% with title = "Error" %} {% include "templates/head.html" %} {% endwith %}
-    <link rel="stylesheet" href="/error/index.css">
+    {% with title = "Error" %}{% include "templates/head.html" %}{% endwith %}
+    <link rel="stylesheet" href="/error/index.css" />
   </head>
   <body>
     {% include "templates/nav.html" %}
     <main>
       <h1>ERROR</h1>
       {% if reason %}
-      <p>{{ reason }}</p>
+        <p>{{ reason }}</p>
       {% endif %}
       <a href="/">Go to home</a>
     </main>
