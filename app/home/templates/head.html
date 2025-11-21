@@ -5,7 +5,11 @@
   content="Legal and technology professional specializing in maritime law, software development, and project management. Committed to innovation and continuous learning."
 />
 <title>
-  {% if title %}{{ title }}{% else %}{{ request.url.path }}{% endif %}
+  {%- if title -%}
+    {{ title }}
+  {%- else -%}
+    {{ request.url.path }}
+  {%- endif -%}
 </title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link
