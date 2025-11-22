@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from .tools.quer_parameter_removal_middleware import QueryParameterRemovalMiddleware
+from .tools.query_parameter_removal_middleware import QueryParameterRemovalMiddleware
 from .tools.minify_middleware import MinifyMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.exceptions import RequestValidationError
