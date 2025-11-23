@@ -10,35 +10,23 @@ main {
   width: 100%;
 }
 
-h1 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  color: #1a1a1a;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
 form {
   width: 100%;
-  max-width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1em;
   background: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2em;
+  border-radius: 2em;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.05);
+  border: 0.025em solid rgba(0, 0, 0, 0.05);
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 1rem 1rem;
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
-  font-size: 1rem;
+  padding: 1em 1em;
+  border: 0.025em solid #e5e5e5;
+  border-radius: 1em;
   transition: all 0.2s ease;
   background: #fcfcfc;
   color: #333;
@@ -55,10 +43,9 @@ textarea:focus {
   outline: none;
   border-color: #000;
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 0.25em rgba(0, 0, 0, 0.05);
 }
 
-/* Error highlighting */
 input:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown) {
   border-color: #ef4444;
@@ -67,35 +54,29 @@ textarea:invalid:not(:placeholder-shown) {
 
 input:invalid:not(:placeholder-shown):focus,
 textarea:invalid:not(:placeholder-shown):focus {
-  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 0 0.25em rgba(239, 68, 68, 0.1);
 }
 
 textarea {
   resize: none;
-  min-height: 150px;
-  line-height: 1.6;
 }
 
 button {
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   background: #000;
   color: #fff;
   border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 1em;
+  font-size: 1em;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 1em;
 }
 
 button:hover {
   background: #222;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.25em);
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.15);
 }
 
 button:active {
