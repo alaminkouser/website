@@ -1,3 +1,7 @@
 {
-  "recommendations": ["ms-python.python", "esbenp.prettier-vscode"]
+  "recommendations": [
+    "ms-python.python",
+    "esbenp.prettier-vscode",
+    "samuelcolvin.jinjahtml"
+  ]
 }
