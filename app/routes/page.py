@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Request
 from app.tools.home import home
 import os
+import markdown
 from fastapi.responses import FileResponse, Response
 
 page_router = APIRouter()
@@ -22,6 +23,20 @@ def page(request: Request, path: str):
         and os.path.isfile(f"app/home{path}index.html")
     ):
         html_string = home.get_template(f"{path}index.html").render(request=request)
+        return Response(content=html_string, media_type="text/html")
+
+    if (
+        path.endswith("/")
+        and os.path.exists(f"app/home{path}index.md")
+        and os.path.isfile(f"app/home{path}index.md")
+    ):
+        markdown_string = open(f"app/home{path}index.md").read()
+        title = markdown_string.split("# ")[1]
+        body_string = markdown.markdown(markdown_string)
+        html_string = home.get_template("templates/markdown/index.html").render(
+            body_string=body_string,
+            title=title,
+        )
         return Response(content=html_string, media_type="text/html")
 
     if (

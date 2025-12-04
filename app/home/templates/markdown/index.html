@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% with title = title %}{% include "templates/head.html" %}{% endwith %}
+  </head>
+  <body>
+    {% include "templates/nav.html" %}
+    <main>{{ body_string|safe }}</main>
+    {% include "templates/footer.html" %}
+  </body>
+</html>
