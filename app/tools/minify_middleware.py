@@ -10,7 +10,10 @@ class MinifyMiddleware(BaseHTTPMiddleware):
 
         TYPES = ["text/html", "text/css", "text/javascript"]
 
-        if response.headers.get("content-type", "").split(";")[0] in TYPES:
+        if (
+            not request.url.path.startswith("/docs/")
+            and response.headers.get("content-type", "").split(";")[0] in TYPES
+        ):
             try:
                 body_iterator = getattr(response, "body_iterator", None)
                 if body_iterator:
