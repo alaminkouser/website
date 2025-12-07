@@ -1,9 +1,4 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/app/main.py"
-    }
-  ]
+  "buildCommand": "cd docs && npm install && npm run build && rm -rf ../app/home/docs && mv doc_build ../app/home/docs",
+  "framework": "fastapi"
 }
