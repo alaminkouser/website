@@ -6,3 +6,6 @@ __pycache__
 
 # For Prettier
 node_modules
+
+# For Rspress
+app/home/docs

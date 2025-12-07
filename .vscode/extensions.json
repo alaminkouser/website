@@ -2,6 +2,7 @@
   "recommendations": [
     "ms-python.python",
     "esbenp.prettier-vscode",
-    "samuelcolvin.jinjahtml"
+    "samuelcolvin.jinjahtml",
+    "astro-build.astro-vscode"
   ]
 }
