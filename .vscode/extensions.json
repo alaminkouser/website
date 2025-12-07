@@ -3,6 +3,7 @@
     "ms-python.python",
     "esbenp.prettier-vscode",
     "samuelcolvin.jinjahtml",
-    "astro-build.astro-vscode"
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx"
   ]
 }
