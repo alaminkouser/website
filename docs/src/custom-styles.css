@@ -1,3 +1,4 @@
-html::-webkit-scrollbar {
+html::-webkit-scrollbar,
+.dialog-frame {
   display: none;
 }
