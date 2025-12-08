@@ -1,4 +1,4 @@
 html::-webkit-scrollbar,
-.dialog-frame {
+.dialog-frame::-webkit-scrollbar {
   display: none;
 }
