@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mermaid from "astro-mermaid";
+import starlightGitHubAlerts from "starlight-github-alerts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
   integrations: [
     mermaid(),
     starlight({
+      plugins: [starlightGitHubAlerts()],
       title: "aak",
       disable404Route: true,
       customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
