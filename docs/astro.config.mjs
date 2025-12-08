@@ -12,12 +12,9 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "aak",
+      disable404Route: true,
+      customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
       social: [
-        {
-          icon: "external",
-          label: "Website",
-          href: "https://alaminkouser.com",
-        },
         {
           icon: "github",
           label: "GitHub",
