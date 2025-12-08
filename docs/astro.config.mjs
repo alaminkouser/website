@@ -29,8 +29,10 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "Guides",
-          items: [{ label: "Example Guide", slug: "start" }],
+          label: "Maritime",
+          autogenerate: {
+            directory: "maritime",
+          },
         },
       ],
     }),

@@ -1,0 +1,50 @@
+---
+title: Ship Registration Process in Bangladesh
+sidebar:
+  label: Ship Registration Process in Bangladesh
+---
+
+The following sequence diagram illustrates the process for provisional and final
+registration of a ship in Bangladesh. It outlines the interactions and flow of
+documents between the Ship Owner/Agent and various key entities, including the
+Principal Officer of the Mercantile Marine Office (MMO), Bangladesh
+Telecommunication Regulatory Commission (BTRC), Bangladesh Telecommunications
+Company Limited (BTCL), the Department of Shipping, Flag State
+Surveyor/Classification Society, the National Board of Revenue (NBR), and the
+Registrar of Bangladesh Ship. The diagram details the steps involved, from the
+initial application for provisional registration to the final issuance of the
+Certificate of Registration.
+
+```mermaid
+sequenceDiagram
+    accTitle: Ship Registration Process in Bangladesh
+    accDescr: The sequence diagram illustrates the process for ship registration in Bangladesh.
+    autonumber
+    actor Ship Owner/Agent
+    participant Flag State Surveyor/Classification Society
+    actor Registrar of Bangladesh Ship
+    actor Principal Officer of MMO
+    participant BTRC
+    participant BTCL
+    participant Department of Shipping
+    Ship Owner/Agent->>Principal Officer of MMO: Application for Provisional Registration
+    Note over Ship Owner/Agent, Principal Officer of MMO: Application in<br>the Prescribed Form with<br>additional Documents
+    Note over Principal Officer of MMO: Issue Provisional Continuous<br>Synopsis Record
+    Note over Principal Officer of MMO: Issue Provisional Safety<br>Equipment Certificate
+    Note over Principal Officer of MMO: Issue Provisional Safety<br>Radio Certificate
+    MMO->>Ship Owner/Agent: Provide Documents
+    Ship Owner/Agent->>BTRC: Provide Necessary Documents(2)
+    BTRC->>Ship Owner/Agent: Call Sign and Radio Station License
+    Note over BTCL: Issue Maritime Mobile<br>Service Identity
+    BTCL->>Ship Owner/Agent: Maritime Mobile Service Identity
+    Note over Department of Shipping: Issue Minimum Safe<br>Manning Document
+    Department of Shipping->>Ship Owner/Agent: Minimum Safe Manning Document
+    Ship Owner/Agent->>Principal Officer of MMO: Maritime Mobile Service Identity<br>and Station License Documents
+    Principal Officer of MMO->>Ship Owner/Agent: Provisional Certificate
+    Note over Flag State Surveyor/Classification Society: Inspect the Vessel
+    Flag State Surveyor/Classification Society->>Ship Owner/Agent: Survey Report
+    Ship Owner/Agent->>NBR: Pay Tax
+    Ship Owner/Agent->>Registrar of Bangladesh Ship: Full Submission of All Documents and Payment of Fees
+    Registrar of Bangladesh Ship->>Ship Owner/Agent: Final Registration
+    Note over Registrar of Bangladesh Ship: Provide Certificate<br>of the Registration
+```

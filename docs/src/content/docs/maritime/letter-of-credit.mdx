@@ -1,0 +1,44 @@
+---
+title: Letter of Credit
+sidebar:
+  label: Letter of Credit
+---
+
+The following sequence diagram illustrates the step-by-step process of an LC
+transaction, depicting the interactions between the buyer, seller, issuing and
+advising banks, and shipping entities from the initial contract agreement to the
+final delivery of goods at the buyer's local port.
+
+```mermaid
+sequenceDiagram
+    accTitle: Letter of Credit
+    accDescr: The sequence diagram illustrates the step-by-step process of an LC transaction.
+    autonumber
+    participant Local Port of Buyer
+    actor Buyer
+    participant Issuing Bank
+    participant Advising Bank
+    actor Seller
+    participant Ship
+    Buyer-->Seller: Agrees to a Contract of Sale
+    Seller->>Buyer: Pro Forma Invoice
+    Seller->>Buyer: Final Pro Forma Invoice
+    Buyer->>Issuing Bank: Application To Open LC
+    Note over Issuing Bank, Buyer: Grants the Application
+    Buyer->>Issuing Bank: Makes Payment
+    Note over Issuing Bank: Issues an LC
+    Issuing Bank->>Advising Bank: Send the LC
+    Advising Bank->>Seller: Notifies About the LC
+    Seller->>Ship: Goods
+    Ship->>Seller: B/L
+    Ship->>Local Port of Buyer: Ships Goods
+    Seller->>Advising Bank: B/L &<br>Other Documents
+    Note over Advising Bank: Checks B/L Specification &<br>LC Specification
+    Advising Bank->>Issuing Bank: Forwards B/L & Documents
+    Advising Bank->>Seller: Pays Money
+    Issuing Bank->>Advising Bank: Pays Money
+    Issuing Bank->>Buyer: Forward B/L &<br>Other Documents
+    Buyer->>Local Port of Buyer: Shows B/L
+    Note over Local Port of Buyer: Checks B/L
+    Local Port of Buyer->>Buyer: Provide Goods
+```
