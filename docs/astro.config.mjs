@@ -17,6 +17,11 @@ export default defineConfig({
       customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
       social: [
         {
+          icon: "email",
+          label: "Email",
+          href: "mailto:contact@alaminkouser.com",
+        },
+        {
           icon: "github",
           label: "GitHub",
           href: "https://github.com/alaminkouser",
