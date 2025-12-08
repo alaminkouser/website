@@ -10,6 +10,7 @@ export default defineConfig({
   trailingSlash: "always",
   compressHTML: true,
   integrations: [
+    mermaid(),
     starlight({
       title: "aak",
       disable404Route: true,
@@ -32,10 +33,6 @@ export default defineConfig({
           items: [{ label: "Example Guide", slug: "start" }],
         },
       ],
-    }),
-    mermaid({
-      theme: "forest",
-      autoTheme: true,
     }),
   ],
 });
