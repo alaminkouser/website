@@ -1,5 +1,6 @@
 html::-webkit-scrollbar,
 #starlight__sidebar::-webkit-scrollbar,
-.dialog-frame::-webkit-scrollbar {
+.dialog-frame::-webkit-scrollbar,
+.mermaid::webkit-scrollbar {
   display: none;
 }
