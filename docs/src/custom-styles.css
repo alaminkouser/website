@@ -1,4 +1,5 @@
 html::-webkit-scrollbar,
+#starlight__sidebar::-webkit-scrollbar,
 .dialog-frame::-webkit-scrollbar {
   display: none;
 }
