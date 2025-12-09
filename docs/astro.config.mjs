@@ -16,7 +16,12 @@ export default defineConfig({
     starlight({
       plugins: [
         starlightUiTweaks({
-          navbarLinks: [{ label: "aak", href: "/" }],
+          navbarLinks: [
+            {
+              label: "aak",
+              href: "/",
+            },
+          ],
         }),
         starlightGitHubAlerts(),
       ],
