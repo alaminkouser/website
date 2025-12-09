@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mermaid from "astro-mermaid";
+import starlightUiTweaks from "starlight-ui-tweaks";
 import starlightGitHubAlerts from "starlight-github-alerts";
 
 // https://astro.build/config
@@ -13,8 +14,13 @@ export default defineConfig({
   integrations: [
     mermaid(),
     starlight({
-      plugins: [starlightGitHubAlerts()],
-      title: "aak",
+      plugins: [
+        starlightUiTweaks({
+          navbarLinks: [{ label: "aak", href: "/" }],
+        }),
+        starlightGitHubAlerts(),
+      ],
+      title: "Docs",
       disable404Route: true,
       customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
       social: [

@@ -15,6 +15,7 @@
     "astro-mermaid": "*",
     "mermaid": "*",
     "sharp": "*",
-    "starlight-github-alerts": "*"
+    "starlight-github-alerts": "*",
+    "starlight-ui-tweaks": "*"
   }
 }
