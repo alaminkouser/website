@@ -2,8 +2,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mermaid from "astro-mermaid";
-import starlightUiTweaks from "starlight-ui-tweaks";
-import starlightGitHubAlerts from "starlight-github-alerts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,17 +12,9 @@ export default defineConfig({
   integrations: [
     mermaid(),
     starlight({
-      plugins: [
-        starlightUiTweaks({
-          navbarLinks: [
-            {
-              label: "aak",
-              href: "/",
-            },
-          ],
-        }),
-        starlightGitHubAlerts(),
-      ],
+      components: {
+        SiteTitle: "./src/components/starlight/SiteTitle.astro",
+      },
       title: "docs",
       favicon: "./favicon.ico",
       disable404Route: true,
@@ -56,8 +46,4 @@ export default defineConfig({
       ],
     }),
   ],
-  prefetch: {
-    prefetchAll: true,
-    defaultStrategy: "viewport",
-  },
 });
