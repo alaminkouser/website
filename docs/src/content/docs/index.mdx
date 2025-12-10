@@ -1,21 +1,18 @@
 ---
-title: Welcome to our Documentation Site
+title: DOCS
+description:
+  Legal and technology professional specializing in maritime law, software
+  development, and project management. Committed to innovation and continuous
+  learning.
 template: splash
-hero:
-  actions:
-    - text: Start
-      link: ./maritime/
-      icon: right-arrow
-    - text: Go to Home
-      link: /
-      variant: minimal
 ---
 
-import { Card } from "@astrojs/starlight/components";
+import { LinkCard } from "@astrojs/starlight/components";
 
-<Card title="Heads Up!" icon="warning">
-  This documentation site is currently under active development. We are
-  continuously working to expand and refine its content to provide you with the
-  most comprehensive and up to date information. Please bear with us as we
-  improve!
-</Card>
+<LinkCard title="Home" href="/" description="Go to Home"></LinkCard>
+
+<LinkCard
+  title="Maritime"
+  href="./maritime/"
+  description="View Maritime Resources and Guides"
+></LinkCard>

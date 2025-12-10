@@ -25,8 +25,8 @@ export default defineConfig({
         }),
         starlightGitHubAlerts(),
       ],
-      title: "Docs",
-      favicon: "./public/favicon.ico",
+      title: "docs",
+      favicon: "./favicon.ico",
       disable404Route: true,
       customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
       social: [
