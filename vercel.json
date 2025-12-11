@@ -1,5 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "cd docs && npm install && rm -rf ../app/home/docs && npm run build && mv dist ../app/home/docs && npx @divriots/jampack ../app/home/docs",
-  "framework": "fastapi"
+  "framework": "fastapi",
+  "headers": [
+    {
+      "source": "/docs/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ]
 }
