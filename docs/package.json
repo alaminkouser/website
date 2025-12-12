@@ -11,9 +11,6 @@
   },
   "dependencies": {
     "@astrojs/starlight": "*",
-    "astro": "*",
-    "astro-mermaid": "*",
-    "mermaid": "*",
-    "sharp": "*"
+    "astro-mermaid": "*"
   }
 }
