@@ -6,6 +6,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import Response
 
 from app.tools.home import home
+from .routes.status.index import status_router
 from .routes.page import page_router
 
 app = FastAPI(title="AL AMIN KOUSER", docs_url=None, redoc_url=None, openapi_url=None)
@@ -16,6 +17,10 @@ app.add_middleware(QueryParameterRemovalMiddleware)
 app.add_middleware(MinifyMiddleware)
 
 app.add_middleware(GZipMiddleware, minimum_size=0, compresslevel=9)
+
+app.include_router(
+    status_router, prefix="/status", tags=["status"], include_in_schema=False
+)
 
 app.include_router(page_router, prefix="", tags=["page"], include_in_schema=False)
 

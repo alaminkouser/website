@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% with title = "Status" %}{% include "templates/head.html" %}{% endwith %}
+  </head>
+  <body>
+    {% include "templates/nav.html" %}
+    <main>
+      <h1>Status</h1>
+      <p>{{ status }}</p>
+    </main>
+    {% include "templates/footer.html" %}
+  </body>
+</html>
