@@ -5,7 +5,6 @@ import mermaid from "astro-mermaid";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://alaminkouser.com",
   base: "/docs",
   trailingSlash: "always",
   compressHTML: true,
