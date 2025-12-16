@@ -18,6 +18,7 @@ export default defineConfig({
       title: "docs",
       favicon: "./favicon.ico",
       disable404Route: true,
+      lastUpdated: true,
       customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
       social: [
         {
