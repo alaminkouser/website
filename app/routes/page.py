@@ -2,6 +2,7 @@ from fastapi import APIRouter, Request
 from app.tools.home import home
 import os
 from fastapi.responses import FileResponse, Response
+from fastapi import status
 
 page_router = APIRouter()
 
@@ -10,7 +11,11 @@ CACHE_CONTROL_HEADER = {"Cache-Control": "public, max-age=3600"}
 
 def not_found(request: Request):
     html_string = home.get_template("templates/404.html").render(request=request)
-    return Response(content=html_string, media_type="text/html", status_code=404)
+    return Response(
+        content=html_string,
+        media_type="text/html",
+        status_code=status.HTTP_404_NOT_FOUND,
+    )
 
 
 @page_router.get("{path:path}")

@@ -4,6 +4,7 @@ from .tools.minify_middleware import MinifyMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import Response
+from fastapi import status
 
 from app.tools.home import home
 from .routes.status.index import status_router
@@ -37,4 +38,8 @@ async def request_validation_exception_handler(
     error_html = home.get_template("error/index.html").render(
         request=request, reason=reason
     )
-    return Response(content=error_html, media_type="text/html", status_code=422)
+    return Response(
+        content=error_html,
+        media_type="text/html",
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+    )
