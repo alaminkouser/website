@@ -25,6 +25,11 @@ export default defineConfig({
           href: "mailto:contact@alaminkouser.com",
         },
         {
+          icon: "discord",
+          label: "Discord",
+          href: "https://discord.gg/alaminkouser",
+        },
+        {
           icon: "github",
           label: "GitHub",
           href: "https://github.com/alaminkouser",
