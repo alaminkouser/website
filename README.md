@@ -30,7 +30,7 @@ uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
 10. If you want to run the full stack including the docs, then run:
 
 ```shell
-npm --prefix docs install; rm -rf app/home/docs; npm --prefix docs run build; mv docs/dist app/home/docs; npx --prefix docs @divriots/jampack app/home/docs; uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
+npm --prefix docs install; npm --prefix docs run build; npx --prefix docs @divriots/jampack docs/dist; rm -rf app/home/docs; mv docs/dist app/home/docs; uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
 ```
 
 > [!NOTE] This will install the dependencies for the docs, remove the existing

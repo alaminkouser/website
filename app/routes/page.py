@@ -46,6 +46,7 @@ def page(request: Request, path: str):
             headers=(
                 CACHE_CONTROL_HEADER_1Y
                 if path.startswith("/docs/_astro/")
+                or path.startswith("/docs/pagefind/")
                 else CACHE_CONTROL_HEADER_1H
             ),
         )
