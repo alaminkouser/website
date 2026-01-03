@@ -33,9 +33,10 @@ uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
 npm --prefix docs install; npm --prefix docs run build; npx --prefix docs @divriots/jampack docs/dist; rm -rf app/home/docs; mv docs/dist app/home/docs; uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
 ```
 
-> [!NOTE] This will install the dependencies for the docs, remove the existing
-> docs, build the docs, move the docs to the location where the app can serve
-> them, and run the server as if it was running in production.
+> [!NOTE]
+> This will install the dependencies for the docs, remove the existing docs,
+> build the docs, move the docs to the location where the app can serve them,
+> and run the server as if it was running in production.
 
 ## Committing
 
