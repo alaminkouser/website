@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Request, Response
-import app.tools.data
+from app.tools.data import data
 from app.tools.home import home
 
 status_router = APIRouter()
@@ -7,7 +7,7 @@ status_router = APIRouter()
 
 @status_router.get("/")
 async def status():
-    text = await app.tools.data.data()
+    text = await data()
 
     if text == "":
         text = "404"
