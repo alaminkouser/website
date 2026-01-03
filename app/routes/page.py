@@ -6,7 +6,8 @@ from fastapi import status
 
 page_router = APIRouter()
 
-CACHE_CONTROL_HEADER = {"Cache-Control": "public, max-age=3600"}
+CACHE_CONTROL_HEADER_1H = {"Cache-Control": "public, max-age=3600"}
+CACHE_CONTROL_HEADER_1Y = {"Cache-Control": "public, max-age=31536000"}
 
 
 def not_found(request: Request):
@@ -32,7 +33,7 @@ def page(request: Request, path: str):
         return Response(
             content=html_string,
             media_type="text/html",
-            headers=CACHE_CONTROL_HEADER if path.startswith("/docs/") else None,
+            headers=CACHE_CONTROL_HEADER_1H if path.startswith("/docs/") else None,
         )
 
     if (
@@ -40,6 +41,13 @@ def page(request: Request, path: str):
         and os.path.exists(f"app/home{path}")
         and os.path.isfile(f"app/home{path}")
     ):
-        return FileResponse(f"app/home{path}", headers=CACHE_CONTROL_HEADER)
+        return FileResponse(
+            f"app/home{path}",
+            headers=(
+                CACHE_CONTROL_HEADER_1Y
+                if path.startswith("/docs/_astro/")
+                else CACHE_CONTROL_HEADER_1H
+            ),
+        )
 
     return not_found(request)
