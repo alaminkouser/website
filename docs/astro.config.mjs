@@ -14,7 +14,7 @@ export default defineConfig({
       components: {
         SiteTitle: "./src/components/starlight/SiteTitle.astro",
       },
-      title: "docs",
+      title: "AL AMIN KOUSER",
       favicon: "./favicon.ico",
       disable404Route: true,
       customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
