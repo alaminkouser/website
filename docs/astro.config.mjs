@@ -15,14 +15,16 @@ export default defineConfig({
       components: {
         SiteTitle: "./src/components/starlight/SiteTitle.astro",
       },
-      plugins: [starlightBlog({
-        title: "Posts",
-        prefix: "posts",
-        navigation: "none",
-        metrics: {
-          words: "total",
-        }
-      })],
+      plugins: [
+        starlightBlog({
+          title: "Posts",
+          prefix: "posts",
+          navigation: "none",
+          metrics: {
+            words: "total",
+          },
+        }),
+      ],
       title: "AL AMIN KOUSER",
       favicon: "./favicon.ico",
       disable404Route: true,
