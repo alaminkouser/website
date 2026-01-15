@@ -21,6 +21,6 @@ jobs:
           npm --prefix docs run build
           npx --prefix docs @divriots/jampack docs/dist
           rm -rf app/home/docs
-          mv docs/dist app/home/docs
+          mv docs/dist/docs app/home/docs
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}

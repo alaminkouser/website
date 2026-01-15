@@ -3,10 +3,12 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mermaid from "astro-mermaid";
 import starlightBlog from "starlight-blog";
+import authorList from "./src/authorConfig/authorList.ts";
 
 // https://astro.build/config
 export default defineConfig({
   base: "/docs",
+  outDir: "dist/docs",
   trailingSlash: "always",
   compressHTML: true,
   integrations: [
@@ -21,8 +23,10 @@ export default defineConfig({
           prefix: "posts",
           navigation: "none",
           metrics: {
+            readingTime: true,
             words: "total",
           },
+          authors: authorList,
         }),
       ],
       title: "AL AMIN KOUSER",

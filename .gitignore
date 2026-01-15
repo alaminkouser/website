@@ -12,3 +12,6 @@ app/home/docs
 
 # package-lock.json
 package-lock.json
+
+# jampack
+.jampack
