@@ -1,7 +1,7 @@
 import type { StarlightBlogConfig } from "starlight-blog";
 
 const authorList: StarlightBlogConfig["authors"] = {
-  aak: {
+  alaminkouser: {
     name: "AL AMIN KOUSER",
     title: "Software Engineer & Maritime Researcher",
     picture: "./src/authorConfig/pictures/aak.png",
