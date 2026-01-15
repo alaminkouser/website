@@ -1,17 +1,27 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
-import mermaid from "astro-mermaid";
 import starlightBlog from "starlight-blog";
+import mermaid from "astro-mermaid";
+
 import authorList from "./src/authorConfig/authorList.ts";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://alaminkouser.com",
   base: "/docs",
   outDir: "dist/docs",
   trailingSlash: "always",
   compressHTML: true,
   integrations: [
+    sitemap({
+      customPages: [
+        "https://alaminkouser.com/",
+        "https://alaminkouser.com/status/",
+        "https://alaminkouser.com/privacy/",
+      ],
+    }),
     mermaid(),
     starlight({
       components: {
