@@ -29,7 +29,7 @@ export default defineConfig({
       },
       plugins: [
         starlightBlog({
-          title: "Posts",
+          title: "POSTS",
           prefix: "posts",
           navigation: "none",
           metrics: {
