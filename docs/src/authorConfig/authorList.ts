@@ -4,7 +4,7 @@ const authorList: StarlightBlogConfig["authors"] = {
   alaminkouser: {
     name: "AL AMIN KOUSER",
     title: "Software Engineer & Maritime Researcher",
-    picture: "./src/authorConfig/pictures/aak.png",
+    picture: "./src/authorConfig/pictures/alaminkouser.png",
     url: "https://alaminkouser.com/",
   },
 };
