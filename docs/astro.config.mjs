@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mermaid from "astro-mermaid";
+import starlightBlog from "starlight-blog";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,6 +15,14 @@ export default defineConfig({
       components: {
         SiteTitle: "./src/components/starlight/SiteTitle.astro",
       },
+      plugins: [starlightBlog({
+        title: "Posts",
+        prefix: "posts",
+        navigation: "none",
+        metrics: {
+          words: "total",
+        }
+      })],
       title: "AL AMIN KOUSER",
       favicon: "./favicon.ico",
       disable404Route: true,
