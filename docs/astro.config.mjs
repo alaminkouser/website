@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import starlight from "@astrojs/starlight";
+import catppuccin from "@catppuccin/starlight";
 import starlightBlog from "starlight-blog";
 import mermaid from "astro-mermaid";
 
@@ -28,6 +29,10 @@ export default defineConfig({
         SiteTitle: "./src/components/starlight/SiteTitle.astro",
       },
       plugins: [
+        catppuccin({
+          dark: { flavor: "mocha", accent: "red" },
+          light: { flavor: "latte", accent: "red" },
+        }),
         starlightBlog({
           title: "POSTS",
           prefix: "posts",
