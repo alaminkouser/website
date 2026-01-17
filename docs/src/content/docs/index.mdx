@@ -1,5 +1,5 @@
 ---
-title: DOCS
+title: DOCS and POSTS
 description:
   Legal and technology professional specializing in maritime law, software
   development, and project management. Committed to innovation and continuous
@@ -7,9 +7,18 @@ description:
 template: splash
 ---
 
-import { LinkCard } from "@astrojs/starlight/components";
+import { LinkCard, LinkButton } from "@astrojs/starlight/components";
+import LatestPosts from "../../components/LatestPosts.astro";
 
-<LinkCard title="Posts" href="./posts/" description="View Posts"></LinkCard>
+## Latest Posts
+
+<LatestPosts />
+
+<LinkButton href="./posts/" variant="secondary" icon="right-arrow">
+  More Posts
+</LinkButton>
+
+## Documents
 
 <LinkCard
   title="Maritime"

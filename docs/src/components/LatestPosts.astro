@@ -1,0 +1,17 @@
+---
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
+
+const posts = Astro.locals.starlightBlog.posts.slice(0, 5);
+---
+
+<CardGrid>
+  {
+    posts.map((post) => (
+      <LinkCard
+        title={post.title}
+        href={post.href}
+        description={`${post.metrics.words.total} words`}
+      />
+    ))
+  }
+</CardGrid>
