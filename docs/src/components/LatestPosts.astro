@@ -10,7 +10,7 @@ const posts = Astro.locals.starlightBlog.posts.slice(0, 5);
       <LinkCard
         title={post.title}
         href={post.href}
-        description={`${post.metrics.words.total} words`}
+        description={`${post.authors.map((author) => author.name).join(", ")}`}
       />
     ))
   }
