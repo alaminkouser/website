@@ -26,14 +26,21 @@ def page(request: Request, path: str):
 
     if (
         path.endswith("/")
+        and not path.startswith("/docs/")
         and os.path.exists(f"app/home{path}index.html")
         and os.path.isfile(f"app/home{path}index.html")
     ):
         html_string = home.get_template(f"{path}index.html").render(request=request)
-        return Response(
-            content=html_string,
-            media_type="text/html",
-            headers=CACHE_CONTROL_HEADER_1H if path.startswith("/docs/") else None,
+        return Response(content=html_string, media_type="text/html")
+
+    if (
+        path.endswith("/")
+        and path.startswith("/docs/")
+        and os.path.exists(f"app/home{path}index.html")
+        and os.path.isfile(f"app/home{path}index.html")
+    ):
+        return FileResponse(
+            f"app/home{path}index.html", headers=CACHE_CONTROL_HEADER_1H
         )
 
     if (
