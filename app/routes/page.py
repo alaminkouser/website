@@ -6,8 +6,8 @@ from fastapi import status
 
 page_router = APIRouter()
 
-CACHE_CONTROL_HEADER_1H = {"Cache-Control": "public, max-age=3600"}
-CACHE_CONTROL_HEADER_1D = {"Cache-Control": "public, max-age=86400"}
+CACHE_CONTROL_HEADER_1H = {"Cache-Control": "public, max-age=3600, immutable"}
+CACHE_CONTROL_HEADER_1Y = {"Cache-Control": "public, max-age=31536000, immutable"}
 
 
 def not_found(request: Request):
@@ -44,7 +44,7 @@ def page(request: Request, path: str):
         return FileResponse(
             f"app/home{path}",
             headers=(
-                CACHE_CONTROL_HEADER_1D
+                CACHE_CONTROL_HEADER_1Y
                 if path.startswith("/docs/_astro/")
                 or path.startswith("/docs/pagefind/")
                 else CACHE_CONTROL_HEADER_1H
