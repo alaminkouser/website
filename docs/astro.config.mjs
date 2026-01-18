@@ -69,6 +69,11 @@ export default defineConfig({
           label: "LinkedIn",
           href: "https://linkedin.com/in/alaminkouser",
         },
+        {
+          icon: "facebook",
+          label: "Facebook",
+          href: "https://www.facebook.com/alaminkouser/",
+        },
       ],
       sidebar: [
         {
