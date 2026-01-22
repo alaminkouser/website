@@ -1,4 +1,5 @@
 {
+  "editor.rulers": [80],
   "files.associations": {
     "*.html": "jinja-html"
   },
@@ -14,6 +15,8 @@
   ],
   "tinymist.typstExtraArgs": [
     "--ignore-system-fonts",
+    "--font-path",
+    "./resume/backend/fonts",
     "resume/main.typ"
   ]
 }

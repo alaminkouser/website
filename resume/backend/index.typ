@@ -18,8 +18,10 @@
 
   show heading.where(level: 2): set block(above: 0.25em, below: 0.25em)
 
+  show heading.where(level: 3): set block(above: 0.25em, below: 0.25em)
+
   set par(
-    first-line-indent: 1em,
+    first-line-indent: 0pt,
     justify: true,
     leading: 0.5em,
     spacing: 0.5em,
@@ -27,7 +29,7 @@
 
   set text(
     size: 1em,
-    font: "JetBrains Mono",
+    font: "Symbols Nerd Font Mono",
     hyphenate: false,
   )
 
