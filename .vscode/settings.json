@@ -4,5 +4,16 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[typst]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+  },
+  "tinymist.fontPaths": [
+    "./resume/backend/fonts"
+  ],
+  "tinymist.typstExtraArgs": [
+    "--ignore-system-fonts",
+    "resume/main.typ"
+  ]
 }

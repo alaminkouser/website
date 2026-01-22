@@ -15,3 +15,6 @@ package-lock.json
 
 # jampack
 .jampack
+
+# resume exported files
+resume/main.pdf

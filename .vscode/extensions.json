@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "samuelcolvin.jinjahtml",
     "astro-build.astro-vscode",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "myriad-dreamin.tinymist"
   ]
 }
