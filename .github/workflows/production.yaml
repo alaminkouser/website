@@ -12,12 +12,12 @@ jobs:
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@latest
+      - uses: actions/checkout@v6
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-      - uses: typst-community/setup-typst@latest
+      - uses: typst-community/setup-typst@v4
       - name: Build Resume
         run: |
           typst compile resume/main.typ --ignore-system-fonts --font-path="./resume/backend/fonts/"
