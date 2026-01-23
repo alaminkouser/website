@@ -10,20 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: typst-community/setup-typst@v4
-      - name: Build Resume
-        run: |
-          typst compile resume/main.typ --ignore-system-fonts --font-path="./resume/backend/fonts/"
-          mv resume/main.pdf app/home/resume.pdf
-      - name: Build DOCS
-        run: |
-          npm --prefix docs install
-          npm --prefix docs run build
-          npx --prefix docs @divriots/jampack docs/dist
-          rm -rf app/home/docs
-          mv docs/dist/docs app/home/docs
+
       - name: Build & Deploy Worker
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
