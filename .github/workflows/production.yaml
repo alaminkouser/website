@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - run: npm install --save-dev wrangler@4
+
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
