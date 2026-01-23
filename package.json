@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "deploy": "uv run pywrangler deploy"
+  },
   "devDependencies": {
+    "wrangler": "*",
     "prettier-plugin-jinja-template": "*"
   }
 }
