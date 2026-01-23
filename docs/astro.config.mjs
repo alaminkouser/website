@@ -50,11 +50,6 @@ export default defineConfig({
       customCss: ["./src/fonts/font-face.css", "./src/custom-styles.css"],
       social: [
         {
-          icon: "email",
-          label: "Email",
-          href: "mailto:contact@alaminkouser.com",
-        },
-        {
           icon: "discord",
           label: "Discord",
           href: "https://discord.com/users/alaminkouser",
