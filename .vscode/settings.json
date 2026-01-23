@@ -18,8 +18,5 @@
     "--font-path",
     "./resume/backend/fonts",
     "resume/main.typ"
-  ],
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  ]
 }
