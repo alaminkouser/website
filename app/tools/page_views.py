@@ -7,8 +7,9 @@ async def page_views(request: Request):
     await db.collection("page_views").add(
         {
             "created_at": firestore_async.SERVER_TIMESTAMP,
-            "url": request.url,
+            "path": request.url.path,
             "ip": request.client.host,
             "user_agent": request.headers.get("user-agent"),
         }
     )
+    return True
