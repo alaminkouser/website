@@ -3,7 +3,7 @@ from firebase_admin import firestore_async
 from app.tools.firebase import db
 
 
-async def page_views(request: Request):
+async def page_views(request: Request) -> None:
     await db.collection("page_views").add(
         {
             "created_at": firestore_async.SERVER_TIMESTAMP,
@@ -13,4 +13,3 @@ async def page_views(request: Request):
             "user_agent": request.headers.get("user-agent"),
         }
     )
-    return True
