@@ -1,7 +1,8 @@
-from fastapi import APIRouter, Request, status
+from fastapi import APIRouter, Request, status, BackgroundTasks
 from app.tools.home import home
 import os
 from fastapi.responses import FileResponse, Response
+from app.tools.page_views import page_views
 
 page_router = APIRouter()
 
@@ -19,7 +20,7 @@ def not_found(request: Request):
 
 
 @page_router.get("{path:path}")
-def page(request: Request, path: str):
+def page(request: Request, path: str, background_tasks: BackgroundTasks):
     if path.startswith("/templates/"):
         return not_found(request)
 
@@ -29,6 +30,7 @@ def page(request: Request, path: str):
         and os.path.exists(f"app/home{path}index.html")
         and os.path.isfile(f"app/home{path}index.html")
     ):
+        background_tasks.add_task(page_views, request)
         html_string = home.get_template(f"{path}index.html").render(request=request)
         return Response(content=html_string, media_type="text/html")
 
@@ -38,6 +40,7 @@ def page(request: Request, path: str):
         and os.path.exists(f"app/home{path}index.html")
         and os.path.isfile(f"app/home{path}index.html")
     ):
+        background_tasks.add_task(page_views, request)
         return FileResponse(
             f"app/home{path}index.html", headers=CACHE_CONTROL_HEADER_1H
         )
