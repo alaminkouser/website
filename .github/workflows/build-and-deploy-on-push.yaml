@@ -28,18 +28,19 @@ jobs:
           mv resume/main.pdf app/home/resume.pdf
       - name: Build DOCS
         run: |
-          npm install -g @mermaid-js/mermaid-cli
           # MERMAID
+          npm install -g @mermaid-js/mermaid-cli
+          echo '{
+            "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+          }' > puppeteer-config.json
           find ./docs/source -type f -name "*.md" -exec sh -c '
             for f; do
-              mmdc -i "$f" -o "$f" -b transparent
+              mmdc -i "$f" -o "$f" -b transparent --puppeteerConfigFile puppeteer-config.json
             done
           ' sh {} +
           deno run --config docs/deno.json build
           rm -rf app/home/docs
           mv docs/public app/home/docs
-        env:
-          PUPPETEER_ARGS: --no-sandbox
       - name: Install Minifiers
         run: |
           npm install -g html-minifier-terser clean-css-cli terser
