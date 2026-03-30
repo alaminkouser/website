@@ -30,7 +30,6 @@ jobs:
         run: |
           npm install -g @mermaid-js/mermaid-cli
           # MERMAID
-          export PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox"
           find ./docs/source -type f -name "*.md" -exec sh -c '
             for f; do
               mmdc -i "$f" -o "$f" -b transparent
@@ -39,6 +38,8 @@ jobs:
           deno run --config docs/deno.json build
           rm -rf app/home/docs
           mv docs/public app/home/docs
+        env:
+          PUPPETEER_ARGS: --no-sandbox
       - name: Install Minifiers
         run: |
           npm install -g html-minifier-terser clean-css-cli terser
