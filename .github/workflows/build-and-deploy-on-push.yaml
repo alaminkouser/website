@@ -30,6 +30,7 @@ jobs:
         run: |
           npm install -g @mermaid-js/mermaid-cli
           # MERMAID
+          export PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox"
           find ./docs/source -type f -name "*.md" -exec sh -c '
             for f; do
               mmdc -i "$f" -o "$f" -b transparent
