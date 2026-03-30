@@ -10,14 +10,14 @@ from app.tools.home import home
 from .routes.status.index import status_router
 from .routes.page import page_router
 
-# from .tools.minify_middleware import MinifyMiddleware
+from .tools.minify_middleware import MinifyMiddleware
 
 app = FastAPI(title="AL AMIN KOUSER", docs_url=None, redoc_url=None, openapi_url=None)
 
 
 app.add_middleware(QueryParameterRemovalMiddleware)
 
-# app.add_middleware(MinifyMiddleware)
+app.add_middleware(MinifyMiddleware)
 
 app.add_middleware(GZipMiddleware, minimum_size=0, compresslevel=9)
 
