@@ -252,26 +252,16 @@ main {
 main a {
   color: #000;
   text-decoration: none;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.6);
   position: relative;
-  transition: color 0.25s ease;
-}
-
-main a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  border-bottom: 1px dashed #000;
-  opacity: 0.6;
   transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+    color 0.25s ease,
+    border-bottom-color 0.25s ease;
 }
 
-main a:hover::after {
-  opacity: 1;
-  transform: translateY(-1px);
+main a:hover {
+  border-bottom-style: solid;
+  border-bottom-color: #000;
 }
 
 main a:visited {
@@ -280,11 +270,10 @@ main a:visited {
 
 main a:focus-visible {
   outline: 2px dashed #000;
-  outline-offset: 4px;
+  outline-offset: 1px;
   border-radius: 6px;
 }
 
-main a:active::after {
-  transform: translateY(0);
-  opacity: 0.8;
+main a:active {
+  border-bottom-color: rgba(0, 0, 0, 0.8);
 }
