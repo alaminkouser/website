@@ -2,44 +2,16 @@
 <html lang="en">
   <head>
     {% with title = "Search Docs" %}{% include "templates/head.html" %}{% endwith %}
-    <link href="/docs/pagefind/pagefind-ui.css" rel="stylesheet" />
-    <style>
-      :root {
-        --pagefind-ui-scale: 1;
-        --pagefind-ui-primary: #000;
-        --pagefind-ui-text: #000;
-        --pagefind-ui-background: #fff;
-        --pagefind-ui-border: #888;
-        --pagefind-ui-tag: #888;
-        --pagefind-ui-border-width: 2px;
-        --pagefind-ui-border-radius: 8px;
-        --pagefind-ui-image-border-radius: 8px;
-        --pagefind-ui-font: "main";
-      }
-      main a::after {
-        content: none;
-      }
-    </style>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     {% include "templates/nav.html" %}
     <main>
       <h1>Search Docs</h1>
-      <div>
-        <div id="search"></div>
-      </div>
+      <input id="search" type="text" placeholder="Search" />
+      <div id="results"></div>
     </main>
-    <script src="/docs/pagefind/pagefind-ui.js"></script>
-    <script>
-      window.addEventListener("DOMContentLoaded", (event) => {
-        new PagefindUI({
-          element: "#search",
-          showSubResults: true,
-          showImages: false,
-          autofocus: true,
-        });
-      });
-    </script>
+    <script type="module" src="./index.js"></script>
     {% include "templates/footer.html" %}
   </body>
 </html>

@@ -1,0 +1,26 @@
+#results.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+#results.loading::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px dashed #000;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
