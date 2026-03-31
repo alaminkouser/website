@@ -13,7 +13,7 @@ INPUT.addEventListener("input", async (e) => {
   const results = await Promise.all(
     search.results.slice(0, 5).map((r) => r.data()),
   );
-  
+
   RESULTS.classList.remove("loading");
   RESULTS.innerHTML = results
     .map(

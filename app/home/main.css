@@ -252,28 +252,5 @@ main {
 main a {
   color: #000;
   text-decoration: none;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.6);
-  position: relative;
-  transition:
-    color 0.25s ease,
-    border-bottom-color 0.25s ease;
-}
-
-main a:hover {
-  border-bottom-style: solid;
-  border-bottom-color: #000;
-}
-
-main a:visited {
-  color: #000;
-}
-
-main a:focus-visible {
-  outline: 2px dashed #000;
-  outline-offset: 1px;
-  border-radius: 6px;
-}
-
-main a:active {
-  border-bottom-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px dotted #000;
 }
