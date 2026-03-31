@@ -1,6 +1,6 @@
 ---
 title: Letter of Credit
-date: 0000-00-00
+date: 2026-04-01
 keywords:
   - lc
   - letter-of-credit
@@ -13,10 +13,10 @@ keywords:
   - international-trade
 ---
 
-A **Letter of Credit (LC)** is a financial instrument used in international
-trade to ensure secure payment between a buyer and a seller. Banks act as
-intermediaries, guaranteeing payment to the seller upon successful fulfillment
-of agreed conditions and submission of compliant documents.
+A Letter of Credit (LC) is a financial instrument used in international trade to
+ensure secure payment between a buyer and a seller. Banks act as intermediaries,
+guaranteeing payment to the seller upon successful fulfillment of agreed
+conditions and submission of compliant documents.
 
 ---
 
@@ -32,7 +32,7 @@ of agreed conditions and submission of compliant documents.
 ## Process Description
 
 The Letter of Credit process begins when the buyer and seller agree on a
-contract of sale. The seller first issues a _pro forma invoice_ and later a
+contract of sale. The seller first issues a **pro forma invoice** and later a
 final version confirming all trade terms.
 
 Following this, the buyer applies to the issuing bank to open a Letter of
@@ -42,7 +42,7 @@ country. The advising bank verifies the authenticity of the LC and notifies the
 seller.
 
 After receiving confirmation, the seller proceeds to ship the goods through a
-carrier. The shipping company issues a _Bill of Lading (B/L)_, which serves as
+carrier. The shipping company issues a **Bill of Lading (B/L)**, which serves as
 proof that the goods have been dispatched.
 
 The seller then submits the B/L along with other required documents to the
