@@ -20,12 +20,6 @@ export async function sourceProcessor(
   const { index } = await pagefind.createIndex();
   for (let i = 0; i < SOURCE_FILE_LIST.length; i++) {
     const file = SOURCE_FILE_LIST[i];
-    await Deno.mkdir(
-      file
-        .replace(source, destination)
-        .substring(0, file.replace(source, destination).lastIndexOf("/")),
-      { recursive: true },
-    );
     if (file.endsWith(".md")) {
       const MD_RAW = await Deno.readTextFile(file);
       const afterMatter = matter.default(MD_RAW, {
@@ -90,6 +84,12 @@ export async function sourceProcessor(
       mdBody = EXCERPT + "\n\n" + CONTENT_WITHOUT_EXCERPT;
 
       if (Deno.env.get("TASK_NAME") === "docs") {
+        await Deno.mkdir(
+          file
+            .replace(source, destination)
+            .substring(0, file.replace(source, destination).lastIndexOf("/")),
+          { recursive: true },
+        );
         const markdownToHtml = await convertMarkdownToHtml({
           title: afterMatter.data.title,
           date: afterMatter.data.date,

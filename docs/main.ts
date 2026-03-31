@@ -10,8 +10,12 @@ if (Deno.env.get("TASK_NAME") === "preparePublicDirectory") {
   await preparePublicDirectory(PUBLIC);
 }
 
-const PAGES = await sourceProcessor(SOURCE, PUBLIC);
+if (Deno.env.get("TASK_NAME") === "pagefind") {
+  await sourceProcessor(SOURCE, PUBLIC);
+}
 
-await makeHome(SOURCE, PUBLIC, PAGES);
-
-await makeKeywords(SOURCE, PUBLIC, PAGES);
+if (Deno.env.get("TASK_NAME") === "docs") {
+  const PAGES = await sourceProcessor(SOURCE, PUBLIC);
+  await makeHome(SOURCE, PUBLIC, PAGES);
+  await makeKeywords(SOURCE, PUBLIC, PAGES);
+}
