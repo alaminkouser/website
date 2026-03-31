@@ -24,8 +24,8 @@ conditions and submission of compliant documents.
 
 - **Buyer** - The importer who initiates the LC
 - **Seller** - The exporter who supplies goods
-- **Issuing Bank** - The buyer’s bank that issues the LC
-- **Advising Bank** - The seller’s bank that verifies and communicates the LC
+- **Issuing Bank** - The buyer's bank that issues the LC
+- **Advising Bank** - The seller's bank that verifies and communicates the LC
 - **Shipping Entity (Ship)** - Responsible for transporting goods
 - **Local Port of Buyer** - Final delivery point for goods
 
@@ -37,7 +37,7 @@ final version confirming all trade terms.
 
 Following this, the buyer applies to the issuing bank to open a Letter of
 Credit. Once the bank reviews and approves the application, it formally issues
-the LC and sends it to the advising bank, typically located in the seller’s
+the LC and sends it to the advising bank, typically located in the seller's
 country. The advising bank verifies the authenticity of the LC and notifies the
 seller.
 
