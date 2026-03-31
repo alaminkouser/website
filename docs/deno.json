@@ -1,6 +1,8 @@
 {
   "tasks": {
-    "build": "deno run --allow-all main.ts"
+    "preparePublicDirectory": "TASK_NAME=preparePublicDirectory deno run --allow-all main.ts",
+    "pagefind": "TASK_NAME=pagefind deno run --allow-all main.ts",
+    "build": "TASK_NAME=docs deno run --allow-all main.ts"
   },
   "imports": {
     "@marked": "npm:marked",

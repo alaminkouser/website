@@ -6,7 +6,9 @@ import { makeKeywords } from "./library/makeKeywords.ts";
 const SOURCE = "./source";
 const PUBLIC = "./public";
 
-await preparePublicDirectory(PUBLIC);
+if (Deno.env.get("TASK_NAME") === "preparePublicDirectory") {
+  await preparePublicDirectory(PUBLIC);
+}
 
 const PAGES = await sourceProcessor(SOURCE, PUBLIC);
 

@@ -28,6 +28,10 @@ jobs:
           mv resume/main.pdf app/home/resume.pdf
       - name: Build DOCS
         run: |
+          rm -rf app/home/docs
+          deno run --config docs/deno.json preparePublicDirectory
+          deno run --config docs/deno.json pagefind
+
           # MERMAID
           npm install -g @mermaid-js/mermaid-cli
           echo '{
@@ -38,8 +42,9 @@ jobs:
               mmdc -i "$f" -o "$f" -b transparent --puppeteerConfigFile puppeteer-config.json
             done
           ' sh {} +
+
           deno run --config docs/deno.json build
-          rm -rf app/home/docs
+
           mv docs/public app/home/docs
       - name: Install Minifiers
         run: |

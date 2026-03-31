@@ -89,44 +89,50 @@ export async function sourceProcessor(
         .trim();
       mdBody = EXCERPT + "\n\n" + CONTENT_WITHOUT_EXCERPT;
 
-      const markdownToHtml = await convertMarkdownToHtml({
-        title: afterMatter.data.title,
-        date: afterMatter.data.date,
-        body: mdBody,
-        keywords: afterMatter.data.keywords,
-      });
-      await Deno.writeTextFile(
-        file.replace(source, destination).replace(/\.md$/, ".html"),
-        markdownToHtml.body,
-      );
+      if (Deno.env.get("TASK_NAME") === "docs") {
+        const markdownToHtml = await convertMarkdownToHtml({
+          title: afterMatter.data.title,
+          date: afterMatter.data.date,
+          body: mdBody,
+          keywords: afterMatter.data.keywords,
+        });
+        await Deno.writeTextFile(
+          file.replace(source, destination).replace(/\.md$/, ".html"),
+          markdownToHtml.body,
+        );
+        pages.push({
+          title: markdownToHtml.title,
+          path: file,
+          excerpt: EXCERPT,
+          date: afterMatter.data.date,
+          keywords: afterMatter.data.keywords,
+        });
+      }
 
-      const PAGEFIND_HTML = await pagefindHTMLMaker(
-        afterMatter.data.title,
-        mdBody,
-      );
-
-      await index!.addHTMLFile({
-        url: (file.endsWith("index.md")
-          ? file.slice(0, file.lastIndexOf("/") + 1)
-          : file
-        ).replace(source, ""),
-        content: PAGEFIND_HTML,
-      });
-
-      pages.push({
-        title: markdownToHtml.title,
-        path: file,
-        excerpt: EXCERPT,
-        date: afterMatter.data.date,
-        keywords: afterMatter.data.keywords,
-      });
+      if (Deno.env.get("TASK_NAME") === "pagefind") {
+        const PAGEFIND_HTML = await pagefindHTMLMaker(
+          afterMatter.data.title,
+          mdBody,
+        );
+        await index!.addHTMLFile({
+          url: (file.endsWith("index.md")
+            ? file.slice(0, file.lastIndexOf("/") + 1)
+            : file
+          ).replace(source, ""),
+          content: PAGEFIND_HTML,
+        });
+      }
     } else {
-      await Deno.copyFile(file, file.replace(source, destination));
+      if (Deno.env.get("TASK_NAME") === "docs") {
+        await Deno.copyFile(file, file.replace(source, destination));
+      }
     }
   }
-  await index!.writeFiles({
-    outputPath: destination + "/pagefind",
-  });
+  if (Deno.env.get("TASK_NAME") === "pagefind") {
+    await index!.writeFiles({
+      outputPath: destination + "/pagefind",
+    });
+  }
 
   await pagefind.close();
   return pages;
