@@ -22,6 +22,11 @@ INPUT.addEventListener("input", async (e) => {
     return;
   }
 
+  if (results.length === 0) {
+    RESULTS.innerHTML = "No results found";
+    return;
+  }
+
   results.forEach((result) => {
     const TITLE = document.createElement("h2");
 
