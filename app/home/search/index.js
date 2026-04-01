@@ -8,32 +8,52 @@ INPUT.addEventListener("input", async (e) => {
   const KEY = e.target.value;
   RESULTS.innerHTML = "";
   RESULTS.classList.add("loading");
-  if (KEY === "") return;
+  if (KEY === "") {
+    RESULTS.classList.remove("loading");
+    return;
+  }
   const search = await PF.search(KEY);
   const results = await Promise.all(
     search.results.slice(0, 5).map((r) => r.data()),
   );
 
   RESULTS.classList.remove("loading");
-  RESULTS.innerHTML = results
-    .map(
-      (result) => `
-    <div class="result-group">
-      <h2><a href="${result.url}">${result.meta.title}</a></h2>
-      <div class="sub-results">
-        ${result.sub_results
-          .map(
-            (sub) => `
-          <div class="result-item">
-            <h3><a href="${sub.url}">${sub.title}</a></h3>
-            <p>${sub.excerpt}</p>
-          </div>
-        `,
-          )
-          .join("")}
-      </div>
-    </div>
-  `,
-    )
-    .join("");
+  if (KEY !== INPUT.value) {
+    return;
+  }
+
+  results.forEach((result) => {
+    const TITLE = document.createElement("h2");
+
+    const TITLE_LINK = document.createElement("a");
+    TITLE_LINK.href = result.url;
+    TITLE_LINK.textContent = result.meta.title;
+
+    TITLE.appendChild(TITLE_LINK);
+
+    RESULTS.appendChild(TITLE);
+
+    const EXCERPT = document.createElement("p");
+    EXCERPT.innerHTML = result.excerpt;
+    RESULTS.appendChild(EXCERPT);
+
+    const SUB_DIV = document.createElement("div");
+    result.sub_results.forEach((sub) => {
+      SUB_DIV.classList.add("left-line");
+
+      const SUB_TITLE = document.createElement("h3");
+
+      const SUB_TITLE_LINK = document.createElement("a");
+      SUB_TITLE_LINK.href = sub.url;
+      SUB_TITLE_LINK.textContent = sub.title;
+      SUB_TITLE.appendChild(SUB_TITLE_LINK);
+      SUB_DIV.appendChild(SUB_TITLE);
+
+      const SUB_EXCERPT = document.createElement("p");
+
+      SUB_EXCERPT.innerHTML = sub.excerpt;
+      SUB_DIV.appendChild(SUB_EXCERPT);
+    });
+    RESULTS.appendChild(SUB_DIV);
+  });
 });
