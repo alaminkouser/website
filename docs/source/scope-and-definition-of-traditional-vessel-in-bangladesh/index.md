@@ -1,6 +1,6 @@
 ---
 title: Scope and Definition of Traditional Vessel in Bangladesh
-date: 0000-00-00
+date: 2026-04-02
 keywords:
   - vessel
   - ship
