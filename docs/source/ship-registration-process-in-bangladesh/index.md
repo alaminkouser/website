@@ -1,6 +1,6 @@
 ---
 title: Ship Registration Process in Bangladesh
-date: 0000-00-00
+date: 2026-04-02
 keywords:
   - maritime
   - ship
