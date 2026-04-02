@@ -23,7 +23,9 @@ INPUT.addEventListener("input", async (e) => {
   }
 
   if (results.length === 0) {
-    RESULTS.innerHTML = "No results found";
+    const NOT_FOUND = document.createElement("pre");
+    NOT_FOUND.textContent = "\n\n¯\\_(ツ)_/¯";
+    RESULTS.appendChild(NOT_FOUND);
     return;
   }
 
