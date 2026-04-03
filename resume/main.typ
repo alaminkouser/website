@@ -3,14 +3,16 @@
 #show: backend
 
 #let data = yaml("data.yaml")
+#let AAK_EMAIL = sys.inputs.at("AAK_EMAIL", default: "[AAK_EMAIL]")
+#let AAK_PHONE = sys.inputs.at("AAK_PHONE", default: "[AAK_PHONE]")
 
 = #data.name
 
 #align(center, text(size: 10pt)[#data.affiliation])
 #align(center, text(size: 10pt)[
   \u{f015} #data.address
-  | #link("tel:" + data.phone)[\u{f095} #data.phone]
-  | #link("mailto:" + data.email)[\u{f0e0} #data.email]
+  | #link("tel:" + AAK_PHONE)[\u{f095} #AAK_PHONE]
+  | #link("mailto:" + AAK_EMAIL)[\u{f0e0} #AAK_EMAIL]
   #linebreak()
   #link(data.website.url)[\u{f0ac} #data.website.view]
   | #link("https://linkedin.com/in/" + data.linkedin + "/")[\u{f08c} #data.linkedin]
