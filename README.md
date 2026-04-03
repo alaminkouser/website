@@ -69,7 +69,7 @@ schedules. Features inside the pipeline include:
 
 ### Prerequisites
 
-- **Python 3.9+**
+- **Python 3.13+**
 - **Deno** (Optional, specifically for building docs via script)
 - **Typst** (Optional, specifically for building the Typst resume layout
   locally)
@@ -81,6 +81,7 @@ schedules. Features inside the pipeline include:
    python -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
+   pip install -r requirements-dev.txt
    ```
 2. Ensure your environment variables are set up by creating a `.env` file (you
    can copy from `.env.example`):
@@ -89,17 +90,25 @@ schedules. Features inside the pipeline include:
    ```
 3. Start the FastAPI development server using `uvicorn`:
    ```bash
-   uvicorn app.main:app --env-file .env --reload
+   uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
    ```
-   The site layout should now be accessible spanning on `http://localhost:8000`.
+   The site layout should now be accessible spanning on
+   `http://127.0.0.1:8080/`.
 
 ### Building the Integrations Locally
 
 - To generate the document pages manually, simply run:
+
   ```bash
-  cd docs && deno run --allow-all main.ts
+  rm -rf app/home/docs
+  deno run --config docs/deno.json preparePublicDirectory
+  deno run --config docs/deno.json pagefind
+  deno run --config docs/deno.json build
+  mv docs/public app/home/docs
   ```
+
 - To compile the resume output locally quickly, run:
   ```bash
   typst compile resume/main.typ
+  mv resume/main.pdf app/home/resume.pdf
   ```
