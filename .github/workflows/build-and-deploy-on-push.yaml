@@ -21,10 +21,10 @@ jobs:
         run:
           vercel pull --yes --environment=production --token=${{
           secrets.VERCEL_TOKEN }}
-      - uses: typst-community/setup-typst@v4
+      - uses: typst-community/setup-typst@v5
       - name: Build Resume
         run: |
-          typst compile resume/main.typ --ignore-system-fonts --font-path="./resume/backend/fonts/"
+          typst compile resume/main.typ --ignore-system-fonts --font-path="./resume/backend/fonts/" --input AAK_EMAIL="${{ secrets.AAK_EMAIL }}" --input AAK_PHONE="${{ secrets.AAK_PHONE }}"
           mv resume/main.pdf app/home/resume.pdf
       - name: Build DOCS
         run: |
