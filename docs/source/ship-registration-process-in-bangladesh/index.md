@@ -72,7 +72,7 @@ the vessel meets crew requirements.
 
 Once provisional documentation is in place, the vessel undergoes inspection by a
 Flag State Surveyor or a Classification Society. This inspection verifies the
-vessel’s seaworthiness and compliance with safety and technical standards. A
+vessel's seaworthiness and compliance with safety and technical standards. A
 survey report is then issued, which is a critical requirement for final
 registration.
 

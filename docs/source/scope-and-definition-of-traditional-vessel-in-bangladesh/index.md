@@ -83,7 +83,7 @@ influence classification beyond physical and mechanical characteristics.
 
 A vessel must serve a transportation purpose. This includes carrying people,
 transporting goods, or facilitating trade and travel. The role of vessels in
-Bangladesh is especially significant due to the country’s extensive river
+Bangladesh is especially significant due to the country's extensive river
 network, making them vital for both economic and social activities.
 
 ## Components and Equipment
