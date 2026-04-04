@@ -1,15 +1,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{%- set default_description = "Legal and technology professional specializing in maritime law, software development, and project management. Committed to innovation and continuous learning." -%}
 <meta
   name="description"
   content="
   {%- if description -%}
     {{ description }}
   {%- else -%}
-    Legal and technology professional specializing in maritime law, software
-    development, and project management. Committed to innovation and continuous
-    learning.
-  {%- endif -%}"
+    {{ default_description }}
+  {%- endif -%}
+  "
 />
 <title>
   {%- if title -%}
