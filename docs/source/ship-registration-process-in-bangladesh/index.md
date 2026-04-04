@@ -3,16 +3,16 @@ title: Ship Registration Process in Bangladesh
 date: 2026-04-03
 keywords:
   - bangladesh
-  - BTCL
-  - BTRC
+  - btcl
+  - btrc
   - certificate-of-registration
   - classification-society
   - department-of-shipping
   - final-registration
   - flag-state-surveyor
   - maritime
-  - MMO
-  - NBR
+  - mmo
+  - nbr
   - provisional-registration
   - registrar-of-ships
   - registration
