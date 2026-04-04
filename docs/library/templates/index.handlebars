@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     {% with title = "{{title}}" %}
-      {% include "templates/head.html" %}
+      {% with description = "{{excerpt}}" %}
+        {% include "templates/head.html" %}
+      {% endwith %}
     {% endwith %}
   </head>
   <body>

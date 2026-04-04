@@ -15,7 +15,7 @@ type ConvertMarkdownToHtml = {
   date: Date;
   body: string;
   keywords: Array<string>;
-  template?: string;
+  excerpt: string;
 };
 
 export async function convertMarkdownToHtml(
@@ -38,6 +38,7 @@ export async function convertMarkdownToHtml(
     dateISO: data.date.toISOString().split("T")[0],
     body: BODY,
     keywords: data.keywords,
+    excerpt: data.excerpt,
   });
   const body = HTML;
 

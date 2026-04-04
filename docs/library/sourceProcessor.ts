@@ -97,6 +97,7 @@ export async function sourceProcessor(
           date: afterMatter.data.date,
           body: mdBody,
           keywords: afterMatter.data.keywords,
+          excerpt: EXCERPT,
         });
         await Deno.writeTextFile(
           file.replace(source, destination).replace(/\.md$/, ".html"),
