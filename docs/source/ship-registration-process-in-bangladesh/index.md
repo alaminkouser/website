@@ -2,26 +2,26 @@
 title: Ship Registration Process in Bangladesh
 date: 2026-04-03
 keywords:
-  - maritime
-  - ship
   - bangladesh
-  - ship-registration
+  - BTCL
+  - BTRC
+  - certificate-of-registration
+  - classification-society
+  - department-of-shipping
+  - final-registration
+  - flag-state-surveyor
+  - maritime
+  - MMO
+  - NBR
+  - provisional-registration
+  - registrar-of-ships
+  - registration
+  - registration-law
   - ship
+  - ship
+  - ship-registration
   - vessel
   - vessel-registration
-  - registration
-  - provisional-registration
-  - final-registration
-  - registration-law
-  - MMO
-  - BTRC
-  - BTCL
-  - department-of-shipping
-  - NBR
-  - registrar-of-ships
-  - classification-society
-  - flag-state-surveyor
-  - certificate-of-registration
 ---
 
 The ship registration process in Bangladesh involves a multi-step procedure that

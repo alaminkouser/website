@@ -2,26 +2,26 @@
 title: Scope and Definition of Traditional Vessel in Bangladesh
 date: 2026-04-02
 keywords:
-  - vessel
+  - bangladesh
+  - cargo
+  - engine
+  - flotation
+  - legal-definition
+  - marine equipment
+  - maritime
+  - maritime-law
+  - navigation
+  - oceans
+  - passengers
+  - rivers
+  - sailboat
+  - seas
+  - self-propelled
   - ship
   - traditional-vessel
-  - bangladesh
-  - maritime-law
-  - maritime
-  - watercraft
-  - flotation
-  - navigation
-  - rivers
-  - seas
-  - oceans
-  - self-propelled
-  - sailboat
   - transportation
-  - cargo
-  - passengers
-  - engine
-  - marine equipment
-  - legal-definition
+  - vessel
+  - watercraft
 ---
 
 The concept of a vessel in Bangladesh encompasses more than a floating

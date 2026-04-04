@@ -2,15 +2,15 @@
 title: Letter of Credit
 date: 2026-04-01
 keywords:
+  - banking
+  - export
+  - import
+  - import-export
+  - international-trade
   - lc
   - letter-of-credit
-  - trade-finance
-  - import-export
-  - import
-  - export
   - maritime
-  - banking
-  - international-trade
+  - trade-finance
 ---
 
 A Letter of Credit (LC) is a financial instrument used in international trade to
