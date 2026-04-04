@@ -116,6 +116,7 @@ export async function sourceProcessor(
         const PAGEFIND_HTML = await pagefindHTMLMaker(
           afterMatter.data.title,
           mdBody,
+          afterMatter.data.keywords,
         );
         await index!.addHTMLFile({
           url: (file.endsWith("index.md")

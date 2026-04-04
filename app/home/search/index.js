@@ -44,6 +44,19 @@ INPUT.addEventListener("input", async (e) => {
     EXCERPT.innerHTML = result.excerpt;
     RESULTS.appendChild(EXCERPT);
 
+    const KEYWORDS = result.meta.keywords.split("|");
+    const KEYWORDS_UL = document.createElement("ul");
+    KEYWORDS_UL.classList.add("keywords");
+    KEYWORDS.forEach((keyword) => {
+      const KEYWORD_LI = document.createElement("li");
+      const KEYWORD_ANCHOR = document.createElement("a");
+      KEYWORD_ANCHOR.href = "/docs/keywords/" + keyword + "/";
+      KEYWORD_ANCHOR.textContent = keyword;
+      KEYWORD_LI.appendChild(KEYWORD_ANCHOR);
+      KEYWORDS_UL.appendChild(KEYWORD_LI);
+    });
+    RESULTS.appendChild(KEYWORDS_UL);
+
     const SUB_DIV = document.createElement("div");
     result.sub_results.forEach((sub) => {
       SUB_DIV.classList.add("left-line");
