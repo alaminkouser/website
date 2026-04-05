@@ -14,7 +14,7 @@ async def status_get():
     return Response(
         content=html_string,
         media_type="text/html",
-        headers={"Cache-Control": "public, max-age=60, immutable"},
+        headers={"Cache-Control": "max-age=60, immutable"},
     )
 
 
