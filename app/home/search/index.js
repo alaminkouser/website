@@ -2,6 +2,10 @@ const PF = await import("/docs/pagefind/pagefind.js");
 const INPUT = document.querySelector("#search");
 const RESULTS = document.querySelector("#results");
 
+await PF.options({
+  metaCacheTag: "0",
+});
+
 PF.init();
 
 INPUT.addEventListener("input", async (e) => {
