@@ -18,7 +18,6 @@ keywords:
   - registration
   - registration-law
   - ship
-  - ship
   - ship-registration
   - vessel
   - vessel-registration

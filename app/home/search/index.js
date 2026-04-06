@@ -6,78 +6,84 @@ await PF.options({
   metaCacheTag: "0",
 });
 
-PF.init();
-
-INPUT.addEventListener("input", async (e) => {
-  const KEY = e.target.value;
-  RESULTS.innerHTML = "";
-  RESULTS.classList.add("loading");
-  if (KEY === "") {
-    RESULTS.classList.remove("loading");
-    return;
-  }
-  const search = await PF.search(KEY);
-  const results = await Promise.all(
-    search.results.slice(0, 5).map((r) => r.data()),
-  );
-
+await PF.init().then(() => {
+  INPUT.style.display = "block";
   RESULTS.classList.remove("loading");
-  if (KEY !== INPUT.value) {
-    return;
-  }
+  INPUT.focus();
+  INPUT.addEventListener("input", async (e) => {
+    const KEY = e.target.value;
+    RESULTS.innerHTML = "";
+    RESULTS.classList.add("loading");
+    if (KEY === "") {
+      RESULTS.classList.remove("loading");
+      return;
+    }
+    const search = await PF.search(KEY);
+    const results = await Promise.all(
+      search.results.slice(0, 5).map((r) => r.data()),
+    );
 
-  if (results.length === 0) {
-    const NOT_FOUND = document.createElement("pre");
-    NOT_FOUND.textContent = "\n\n¯\\_(ツ)_/¯";
-    RESULTS.appendChild(NOT_FOUND);
-    return;
-  }
+    RESULTS.classList.remove("loading");
+    if (KEY !== INPUT.value) {
+      return;
+    }
 
-  results.forEach((result) => {
-    const TITLE = document.createElement("h2");
+    if (results.length === 0) {
+      const NOT_FOUND = document.createElement("pre");
+      NOT_FOUND.textContent = "\n\n¯\\_(ツ)_/¯";
+      RESULTS.appendChild(NOT_FOUND);
+      return;
+    }
 
-    const TITLE_LINK = document.createElement("a");
-    TITLE_LINK.href = result.url;
-    TITLE_LINK.textContent = result.meta.title;
+    results.forEach((result) => {
+      const TITLE = document.createElement("h2");
 
-    TITLE.appendChild(TITLE_LINK);
+      const TITLE_LINK = document.createElement("a");
+      TITLE_LINK.href = result.url;
+      TITLE_LINK.textContent = result.meta.title;
 
-    RESULTS.appendChild(TITLE);
+      TITLE.appendChild(TITLE_LINK);
 
-    const EXCERPT = document.createElement("p");
-    EXCERPT.innerHTML = result.excerpt;
-    RESULTS.appendChild(EXCERPT);
+      RESULTS.appendChild(TITLE);
 
-    const KEYWORDS = result.meta.keywords.split("|");
-    const KEYWORDS_UL = document.createElement("ul");
-    KEYWORDS_UL.classList.add("keywords");
-    KEYWORDS.forEach((keyword) => {
-      const KEYWORD_LI = document.createElement("li");
-      const KEYWORD_ANCHOR = document.createElement("a");
-      KEYWORD_ANCHOR.href = "/docs/keywords/" + keyword + "/";
-      KEYWORD_ANCHOR.textContent = keyword;
-      KEYWORD_LI.appendChild(KEYWORD_ANCHOR);
-      KEYWORDS_UL.appendChild(KEYWORD_LI);
+      const EXCERPT = document.createElement("p");
+      EXCERPT.innerHTML = result.excerpt;
+      RESULTS.appendChild(EXCERPT);
+
+      const KEYWORDS = result.meta.keywords.split("|");
+      const KEYWORDS_P = document.createElement("p");
+      KEYWORDS_P.classList.add("keywords");
+      KEYWORDS.forEach((keyword, index) => {
+        const KEYWORD_SPAN = document.createElement("span");
+        const KEYWORD_ANCHOR = document.createElement("a");
+        KEYWORD_ANCHOR.href = "/docs/keywords/" + keyword + "/";
+        KEYWORD_ANCHOR.textContent = keyword;
+        KEYWORD_SPAN.appendChild(KEYWORD_ANCHOR);
+        KEYWORDS_P.appendChild(KEYWORD_SPAN);
+        if (KEYWORDS.length > index + 1) {
+          KEYWORDS_P.appendChild(document.createTextNode(", "));
+        }
+      });
+      RESULTS.appendChild(KEYWORDS_P);
+
+      const SUB_DIV = document.createElement("div");
+      result.sub_results.forEach((sub) => {
+        SUB_DIV.classList.add("left-line");
+
+        const SUB_TITLE = document.createElement("h3");
+
+        const SUB_TITLE_LINK = document.createElement("a");
+        SUB_TITLE_LINK.href = sub.url;
+        SUB_TITLE_LINK.textContent = sub.title;
+        SUB_TITLE.appendChild(SUB_TITLE_LINK);
+        SUB_DIV.appendChild(SUB_TITLE);
+
+        const SUB_EXCERPT = document.createElement("p");
+
+        SUB_EXCERPT.innerHTML = sub.excerpt;
+        SUB_DIV.appendChild(SUB_EXCERPT);
+      });
+      RESULTS.appendChild(SUB_DIV);
     });
-    RESULTS.appendChild(KEYWORDS_UL);
-
-    const SUB_DIV = document.createElement("div");
-    result.sub_results.forEach((sub) => {
-      SUB_DIV.classList.add("left-line");
-
-      const SUB_TITLE = document.createElement("h3");
-
-      const SUB_TITLE_LINK = document.createElement("a");
-      SUB_TITLE_LINK.href = sub.url;
-      SUB_TITLE_LINK.textContent = sub.title;
-      SUB_TITLE.appendChild(SUB_TITLE_LINK);
-      SUB_DIV.appendChild(SUB_TITLE);
-
-      const SUB_EXCERPT = document.createElement("p");
-
-      SUB_EXCERPT.innerHTML = sub.excerpt;
-      SUB_DIV.appendChild(SUB_EXCERPT);
-    });
-    RESULTS.appendChild(SUB_DIV);
   });
 });
