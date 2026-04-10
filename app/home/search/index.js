@@ -6,6 +6,16 @@ await PF.options({
   metaCacheTag: "0",
 });
 
+async function search(KEY) {
+  const search = await PF.search(KEY);
+  const results = await Promise.all(
+    search.results.slice(0, 5).map((r) => r.data()),
+  );
+  return results;
+}
+
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
 await PF.init().then(() => {
   INPUT.style.display = "block";
   RESULTS.classList.remove("loading");
@@ -18,13 +28,12 @@ await PF.init().then(() => {
       RESULTS.classList.remove("loading");
       return;
     }
-    const search = await PF.search(KEY);
-    const results = await Promise.all(
-      search.results.slice(0, 5).map((r) => r.data()),
-    );
+
+    const [_, results] = await Promise.all([delay(250), search(KEY)]);
 
     RESULTS.classList.remove("loading");
     if (KEY !== INPUT.value) {
+      console.log("KEY", KEY);
       return;
     }
 
