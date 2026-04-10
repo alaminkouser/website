@@ -128,7 +128,7 @@ Finally, we decide what to do with the generated build.
   our APIs, Deno scripts, and indexing processes still work on their own,
   without forcefully updating the live site.
 
-## Full Workflow YAML
+### Full Workflow YAML
 
 The following is the full workflow YAML file:
 
