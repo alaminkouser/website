@@ -1,5 +1,5 @@
 ---
-title: Automating Deployments for Cielotrip Website
+title: Automating Deployments for CieloTrip Website
 date: 2026-04-11
 keywords:
   - ci-cd
@@ -10,7 +10,7 @@ keywords:
   - website
 ---
 
-This article explores the CI/CD pipeline powering the Cielotrip project. It
+This article explores the CI/CD pipeline powering the CieloTrip project. It
 details how a combination of GitHub Actions, Deno, and Vercel automates
 production deployments upon codebase updates, while preserving reliability
 through daily scheduled health checks without forced redeployments.
@@ -21,7 +21,7 @@ through daily scheduled health checks without forced redeployments.
 
 In modern web development, CI/CD (Continuous Integration and Continuous
 Deployment) is the backbone of a fast and reliable workflow. Today, I want to
-walk through how we handle automated deployments for the **Cielotrip** project
+walk through how we handle automated deployments for the **CieloTrip** project
 using GitHub Actions, Deno, and Vercel.
 
 Our workflow is designed to do two primary things:
