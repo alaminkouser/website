@@ -33,7 +33,7 @@ Our workflow is designed to do two primary things:
 Let's break down the GitHub Actions workflow YAML file that makes this all
 happen.
 
-### The CI/CD Configuration
+## The CI/CD Configuration
 
 Here is the GitHub Actions workflow we use:
 
@@ -58,13 +58,13 @@ scenarios:
 - **On Push:** Whenever a developer pushes code to the `main` branch.
 - **On Schedule:** Every day at midnight (`0 0 * * *`), via a CRON job.
 
-### The Step by Step Workflow
+## The Step by Step Workflow
 
 Once triggered, the workflow starts a job called `Build-and-Deploy-on-Push`
 running on the latest Ubuntu environment (`ubuntu-latest`). Here is what happens
 next:
 
-#### Checking out the Code and Setting Up the Environment
+### Checking out the Code and Setting Up the Environment
 
 ```yaml
 - uses: actions/checkout@v6
@@ -78,7 +78,7 @@ First, the runner clones the repository so it can access our project files using
 `actions/checkout`. Then, it explicitly installs the Vercel CLI globally and
 sets up the Deno runtime environment using the official `setup-deno` action.
 
-#### Pulling Vercel Environment Variables
+### Pulling Vercel Environment Variables
 
 ```yaml
 - name: Pull Vercel Environment Information
@@ -91,7 +91,7 @@ Before building, our application needs context. By running `vercel pull`, we
 pull the production environment configuration directly from Vercel securely,
 authenticating with a secret `VERCEL_TOKEN`.
 
-#### The Build Step Using Deno
+### The Build Step Using Deno
 
 ```yaml
 - name: Build step
@@ -107,7 +107,7 @@ likely builds a search index using **Pagefind**. After the script finishes, we
 move the resulting `pagefind` directory into our `static/` folder so it can be
 shipped alongside our project.
 
-#### Conditional Deployments
+### Conditional Deployments
 
 ```yaml
 - name: Deploy Project Artifacts to Vercel
@@ -128,7 +128,7 @@ Finally, we decide what to do with the generated build.
   our APIs, Deno scripts, and indexing processes still work on their own,
   without forcefully updating the live site.
 
-### Full Workflow YAML
+## Full Workflow YAML
 
 The following is the full workflow YAML file:
 
