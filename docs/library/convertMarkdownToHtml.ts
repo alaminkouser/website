@@ -36,7 +36,7 @@ export async function convertMarkdownToHtml(
     title: data.title,
     dateFormatted: formatDateUTC(data.date),
     dateISO: data.date.toISOString().split("T")[0],
-    body: BODY,
+    body: BODY.replaceAll("{", "&#123;").replaceAll("}", "&#125;"),
     keywords: data.keywords,
     excerpt: data.excerpt,
   });
