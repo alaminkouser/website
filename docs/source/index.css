@@ -1,0 +1,32 @@
+main pre {
+  border: 1px solid #000;
+  max-width: calc(100vw - 4em - 2px);
+  overflow: auto;
+}
+
+main pre > code {
+  padding: 1ch;
+  min-width: 100%;
+  box-sizing: border-box;
+  display: inline-grid;
+}
+
+main pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+main pre::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 4px;
+  border: 2px solid #fff;
+}
+
+main pre::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+main pre::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 4px;
+}
