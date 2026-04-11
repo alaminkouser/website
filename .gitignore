@@ -7,6 +7,9 @@ __pycache__
 # For Prettier
 node_modules
 
+# For fonts
+app/home/main.woff2
+
 # For docs
 docs/deno.lock
 docs/public
