@@ -28,7 +28,7 @@ jobs:
           mv resume/main.pdf app/home/resume.pdf
       - name: Download JetBrains Mono Font
         run:
-          curl
+          curl -L
           "https://github.com/JetBrains/JetBrainsMono/raw/refs/heads/master/fonts/webfonts/JetBrainsMono%5Bwght%5D.woff2"
           -o "app/home/main.woff2"
       - name: Build DOCS

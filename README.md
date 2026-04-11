@@ -57,12 +57,14 @@ schedules. Features inside the pipeline include:
 2. **Build Resume:** Compiles `resume/main.typ` formatting text into a
    production-ready PDF, placing it in the public output
    (`app/home/resume.pdf`).
-3. **Build Docs:** Executes `deno run` against `docs/deno.json` configurations
+3. **Download Font:** Fetches the JetBrains Mono web font and saves it to
+   `app/home/main.woff2`.
+4. **Build Docs:** Executes `deno run` against `docs/deno.json` configurations
    to transpile Markdown content to HTML seamlessly integrating it into
    `app/home/docs`.
-4. **Minify Assets:** Crawls `.html`, `.css`, and `.js` output resources and
+5. **Minify Assets:** Crawls `.html`, `.css`, and `.js` output resources and
    aggressively minifies them reducing overall payload.
-5. **Deploy:** Uses Vercel CLI to securely push production-ready artifacts
+6. **Deploy:** Uses Vercel CLI to securely push production-ready artifacts
    entirely to Vercel (production deployments skipped on scheduled runs).
 
 ## 💻 Local Development
@@ -83,12 +85,16 @@ schedules. Features inside the pipeline include:
    pip install -r requirements.txt
    pip install -r requirements-dev.txt
    ```
-2. Ensure your environment variables are set up by creating a `.env` file (you
+2. Download the site font (JetBrains Mono):
+   ```bash
+   curl -L "https://github.com/JetBrains/JetBrainsMono/raw/refs/heads/master/fonts/webfonts/JetBrainsMono%5Bwght%5D.woff2" -o "app/home/main.woff2"
+   ```
+3. Ensure your environment variables are set up by creating a `.env` file (you
    can copy from `.env.example`):
    ```bash
    cp .env.example .env
    ```
-3. Start the FastAPI development server using `uvicorn`:
+4. Start the FastAPI development server using `uvicorn`:
    ```bash
    uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
    ```
