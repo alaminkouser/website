@@ -28,7 +28,7 @@
   property="og:description"
   content="{%- if description -%}{{ description }}{%- else -%}{{ default_description }}{%- endif -%}"
 />
-<meta property="og:image" content="/alaminkouser.png" />
+<meta property="og:image" content="{{ request.base_url }}alaminkouser.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ request.url }}" />
 <link
