@@ -20,6 +20,17 @@
   {{- " | AL AMIN KOUSER" -}}
 </title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta
+  property="og:title"
+  content="{%- if title -%}{{ title }}{%- else -%}{{ request.url.path }}{%- endif -%}{{- " | AL AMIN KOUSER" -}}"
+/>
+<meta
+  property="og:description"
+  content="{%- if description -%}{{ description }}{%- else -%}{{ default_description }}{%- endif -%}"
+/>
+<meta property="og:image" content="/alaminkouser.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ request.url }}" />
 <link
   rel="preload"
   href="/main.woff2"
