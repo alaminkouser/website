@@ -33,7 +33,6 @@ await PF.init().then(() => {
 
     RESULTS.classList.remove("loading");
     if (KEY !== INPUT.value) {
-      console.log("KEY", KEY);
       return;
     }
 
