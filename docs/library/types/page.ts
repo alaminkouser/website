@@ -3,5 +3,5 @@ export type Page = {
   path: string;
   date: Date;
   excerpt: string;
-  keywords: Array<string>;
+  keywords: string[];
 };
