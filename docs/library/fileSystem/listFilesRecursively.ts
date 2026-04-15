@@ -1,4 +1,6 @@
-export async function listFilesRecursively(directory: string): Promise<string[]> {
+export async function listFilesRecursively(
+  directory: string,
+): Promise<string[]> {
   const files: string[] = [];
 
   for await (const entry of Deno.readDir(directory)) {

@@ -21,7 +21,9 @@ type MarkdownPageRenderResult = {
 export async function renderMarkdownPage(
   data: MarkdownPageData,
 ): Promise<MarkdownPageRenderResult> {
-  const renderTemplate = await compileTemplate("./library/templates/index.handlebars");
+  const renderTemplate = await compileTemplate(
+    "./library/templates/index.handlebars",
+  );
   const htmlBody = await marked.parse(data.body);
   const html = renderTemplate({
     title: data.title,

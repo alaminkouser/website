@@ -1,4 +1,7 @@
-export function toPagePathFromSource(sourceRoot: string, rawPath: string): string {
+export function toPagePathFromSource(
+  sourceRoot: string,
+  rawPath: string,
+): string {
   const path = rawPath.startsWith(sourceRoot)
     ? rawPath.replace(sourceRoot, "")
     : rawPath;

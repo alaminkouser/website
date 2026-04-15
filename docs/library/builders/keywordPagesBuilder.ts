@@ -8,7 +8,9 @@ export async function buildKeywordPages(
   publicRoot: string,
   pages: Page[],
 ): Promise<void> {
-  const renderTemplate = await compileTemplate("./library/templates/home.handlebars");
+  const renderTemplate = await compileTemplate(
+    "./library/templates/home.handlebars",
+  );
   const allKeywords = Array.from(
     pages.reduce((acc: Set<string>, page) => {
       page.keywords.forEach((keyword) => acc.add(keyword));
@@ -33,6 +35,9 @@ export async function buildKeywordPages(
     });
 
     await Deno.mkdir(`${publicRoot}/keywords/${keyword}`, { recursive: true });
-    await Deno.writeTextFile(`${publicRoot}/keywords/${keyword}/index.html`, html);
+    await Deno.writeTextFile(
+      `${publicRoot}/keywords/${keyword}/index.html`,
+      html,
+    );
   }
 }

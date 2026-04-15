@@ -20,7 +20,10 @@ export async function sourceProcessor(
     if (taskName === "docs") {
       const destinationDirectory = file
         .replace(sourceRoot, destinationRoot)
-        .substring(0, file.replace(sourceRoot, destinationRoot).lastIndexOf("/"));
+        .substring(
+          0,
+          file.replace(sourceRoot, destinationRoot).lastIndexOf("/"),
+        );
       await Deno.mkdir(destinationDirectory, { recursive: true });
     }
 
@@ -42,7 +45,9 @@ export async function sourceProcessor(
           `\nFile: ${file}`,
       );
     }
-    const contentWithoutExcerpt = parsed.content.replace(`${excerpt}\n\n---`, "").trim();
+    const contentWithoutExcerpt = parsed.content
+      .replace(`${excerpt}\n\n---`, "")
+      .trim();
     const markdownBody = `${excerpt}\n\n${contentWithoutExcerpt}`;
 
     if (taskName === "docs") {
@@ -94,7 +99,10 @@ export async function sourceProcessor(
   return pages;
 }
 
-function validateMarkdownFrontMatter(filePath: string, parsed: matter.GrayMatterFile<string>) {
+function validateMarkdownFrontMatter(
+  filePath: string,
+  parsed: matter.GrayMatterFile<string>,
+) {
   if (!parsed.data.title) {
     throw new Error(
       "Markdown file must contain a title. Please add a title to the markdown file." +
@@ -109,7 +117,10 @@ function validateMarkdownFrontMatter(filePath: string, parsed: matter.GrayMatter
     );
   }
 
-  if (!(parsed.data.date instanceof Date) || isNaN(parsed.data.date.getTime())) {
+  if (
+    !(parsed.data.date instanceof Date) ||
+    isNaN(parsed.data.date.getTime())
+  ) {
     throw new Error(
       "Markdown file must contain a valid date. Please add a valid date to the markdown file." +
         `\nFile: ${filePath}`,

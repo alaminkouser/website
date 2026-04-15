@@ -9,7 +9,9 @@ export async function renderPagefindDocument(
   body: string,
   keywords: string[],
 ): Promise<string> {
-  const renderTemplate = await compileTemplate("./library/templates/pagefind.handlebars");
+  const renderTemplate = await compileTemplate(
+    "./library/templates/pagefind.handlebars",
+  );
 
   return renderTemplate({
     title,

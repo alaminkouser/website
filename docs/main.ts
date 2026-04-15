@@ -1,5 +1,6 @@
 import { buildHomePage } from "./library/builders/homePageBuilder.ts";
 import { buildKeywordPages } from "./library/builders/keywordPagesBuilder.ts";
+import { buildSitemap } from "./library/builders/sitemapBuilder.ts";
 import { preparePublicDirectory } from "./library/fileSystem/preparePublicDirectory.ts";
 import { sourceProcessor } from "./library/processors/sourceProcessor.ts";
 
@@ -19,4 +20,5 @@ if (TASK_NAME === "docs") {
   const pages = await sourceProcessor(SOURCE, PUBLIC, "docs");
   await buildHomePage(SOURCE, PUBLIC, pages);
   await buildKeywordPages(SOURCE, PUBLIC, pages);
+  await buildSitemap(SOURCE, PUBLIC, pages);
 }
