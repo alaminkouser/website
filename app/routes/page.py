@@ -1,7 +1,7 @@
-from fastapi import APIRouter, Request, status, BackgroundTasks
-from app.tools.home import home
 import os
+from fastapi import APIRouter, Request, status, BackgroundTasks
 from fastapi.responses import FileResponse, Response
+from app.tools.home import home
 from app.tools.page_views import page_views
 
 page_router = APIRouter()

@@ -1,6 +1,6 @@
+import os
 import firebase_admin
 from firebase_admin import credentials, firestore_async
-import os
 
 cred = credentials.Certificate(
     {

@@ -1,16 +1,14 @@
-from fastapi import FastAPI, Request
 import os
-from .tools.query_parameter_removal_middleware import QueryParameterRemovalMiddleware
+from fastapi import FastAPI, Request
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import Response
 from fastapi import status
-
-from app.tools.home import home
+from .tools.query_parameter_removal_middleware import QueryParameterRemovalMiddleware
+from .tools.minify_middleware import MinifyMiddleware
+from .tools.home import home
 from .routes.status.index import status_router
 from .routes.page import page_router
-
-from .tools.minify_middleware import MinifyMiddleware
 
 app = FastAPI(title="AL AMIN KOUSER", docs_url=None, redoc_url=None, openapi_url=None)
 
