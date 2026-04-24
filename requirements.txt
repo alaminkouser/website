@@ -1,4 +1,5 @@
 fastapi[standard]
+logfire[fastapi]
 minify-html
 aiohttp
 firebase-admin
