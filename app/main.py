@@ -1,5 +1,4 @@
 import os
-import logfire
 from fastapi import FastAPI, Request
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.exceptions import RequestValidationError
@@ -12,9 +11,6 @@ from .routes.status.index import status_router
 from .routes.page import page_router
 
 app = FastAPI(title="AL AMIN KOUSER", docs_url=None, redoc_url=None, openapi_url=None)
-
-logfire.configure()
-logfire.instrument_fastapi(app)
 
 
 app.add_middleware(QueryParameterRemovalMiddleware)
