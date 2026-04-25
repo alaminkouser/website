@@ -191,10 +191,10 @@ flowchart TD
     C --> D[Cron worker loop scans directory]
     D --> E{Is scheduled time due?}
     E -- No --> D
-    E -- Yes --> F[Run task through agent]
-    F --> G[Format output for Telegram]
-    G --> H[Send<br/>message/photo/file]
-    H --> I[Delete completed<br/>cron file]
+    E -- Yes --> F[Run task<br/>through agent]
+    F --> G[Format output for<br/>Telegram]
+    G --> H[Send<br/>text/photo/file]
+    H --> I[Delete<br/>completed<br/>cron file]
 ```
 
 ## Real-World Utility: Website Status Updates
