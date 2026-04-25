@@ -80,19 +80,34 @@ flowchart LR
     U[User on Telegram] --> B[Telegram Bot App]
     B --> H[Client Handlers]
     H --> A[Agent Main]
-    A --> M[Google Model]
-    A --> T1[WebSearch Tool]
-    A --> T2[WebFetch Tool]
-    A --> MCP1[MCP Notebook Vault]
-    A --> MCP2[MCP Browser]
-    A --> MCP3[MCP SerpAPI]
-    A --> CT[Custom Tools]
+    A --> D{Need external tool?}
+
+    D -- No --> R[Compose final answer]
+    D -- Yes --> X[Select best tool]
+
+    X --> T1[WebSearch Tool]
+    X --> T2[WebFetch Tool]
+    X --> MCP1[MCP Notebook Vault]
+    X --> MCP2[MCP Browser]
+    X --> MCP3[MCP SerpAPI]
+    X --> CT[Custom Tools]
+
     CT --> SP[status_put CLI]
     CT --> CR[cron_create]
+    T1 --> A
+    T2 --> A
+    MCP1 --> A
+    MCP2 --> A
+    MCP3 --> A
+    SP --> A
+    CR --> A
+    A --> D
+
     CR --> Q[.DATA/cron Queue]
     Q --> W[Cron Worker]
     W --> A
-    W --> B
+    R --> B
+    B --> U
 ```
 
 ## Why Telegram as the Interface?
