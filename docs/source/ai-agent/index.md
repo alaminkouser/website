@@ -193,8 +193,8 @@ flowchart TD
     E -- No --> D
     E -- Yes --> F[Run task through agent]
     F --> G[Format output for Telegram]
-    G --> H[Send message/photo/file]
-    H --> I[Delete completed cron file]
+    G --> H[Send<br/>message/photo/file]
+    H --> I[Delete completed<br/>cron file]
 ```
 
 ## Real-World Utility: Website Status Updates
