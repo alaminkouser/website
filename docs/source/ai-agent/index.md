@@ -187,7 +187,7 @@ It is simple infrastructure with practical power.
 
 The `status_put` tool bridges AI and personal branding.  
 From chat, I can set a concise status shown on my website
-(`alaminkouser.com/status`) through a dedicated CLI command.
+(`alaminkouser.com/status/`) through a dedicated CLI command.
 
 This is a good example of “small feature, high leverage”: tiny code footprint,
 immediate day-to-day value.
@@ -255,14 +255,3 @@ Planned improvements:
 - richer scheduling controls (update/cancel/list jobs)
 - better prompt and tool auditing for long-term reliability
 - optional multi-user mode with proper auth and per-user memory
-
-## Final Thoughts
-
-This is one of those projects where practical usefulness and technical depth
-meet nicely.  
-It demonstrates applied LLM engineering, tool orchestration, agent UX design,
-and production-minded constraints in a compact codebase.
-
-If you are building portfolio projects, this pattern is a strong one:  
-**pick a real personal workflow, then build an AI system that actually improves
-it.**
