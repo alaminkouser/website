@@ -83,7 +83,7 @@ flowchart LR
     A --> D{Need external tool?}
 
     D -- No --> R[Compose final answer]
-    D -- Yes --> X[Select best tool]
+    D -- Yes --> X[Select best<br/>tool]
 
     X --> T1[WebSearch Tool]
     X --> T2[WebFetch Tool]
@@ -101,7 +101,6 @@ flowchart LR
     MCP3 --> A
     SP --> A
     CR --> A
-    A --> D
 
     CR --> Q[.DATA/cron Queue]
     Q --> W[Cron Worker]
