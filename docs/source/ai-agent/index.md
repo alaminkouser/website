@@ -183,19 +183,6 @@ Why this approach works well:
 
 It is simple infrastructure with practical power.
 
-```mermaid
-flowchart TD
-    A[Agent receives scheduling request] --> B[cron_create tool]
-    B --> C[Write file in .DATA/cron<br/>YYYY-MM-DD_HH-MM-SS.id.txt]
-    C --> D[Cron worker loop scans directory]
-    D --> E{Is scheduled time due?}
-    E -- No --> D
-    E -- Yes --> F[Run task<br/>through agent]
-    F --> G[Format output for<br/>Telegram]
-    G --> H[Send<br/>text/photo/file]
-    H --> I[Delete<br/>completed<br/>cron file]
-```
-
 ## Real-World Utility: Website Status Updates
 
 The `status_put` tool bridges AI and personal branding.  
