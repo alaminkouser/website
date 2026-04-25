@@ -21,8 +21,9 @@ through daily scheduled health checks without forced redeployments.
 
 In modern web development, CI/CD (Continuous Integration and Continuous
 Deployment) is the backbone of a fast and reliable workflow. Today, I want to
-walk through how we handle automated deployments for the **CieloTrip** project
-using GitHub Actions, Deno, and Vercel.
+walk through how we handle automated deployments for the
+[CieloTrip](https://cielotrip.com/) project using GitHub Actions, Deno, and
+Vercel.
 
 Our workflow is designed to do two primary things:
 
