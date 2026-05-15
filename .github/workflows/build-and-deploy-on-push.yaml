@@ -1,5 +1,7 @@
 name: Build and Deploy on Push
 env:
+  AAK_EMAIL: ${{ secrets.AAK_EMAIL }}
+  AAK_PHONE: ${{ secrets.AAK_PHONE }}
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
