@@ -1,7 +1,5 @@
 name: Build and Deploy on Push
 env:
-  AAK_EMAIL: ${{ secrets.AAK_EMAIL }}
-  AAK_PHONE: ${{ secrets.AAK_PHONE }}
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
@@ -25,7 +23,9 @@ jobs:
           secrets.VERCEL_TOKEN }}
       - uses: typst-community/setup-typst@v5
       - name: Build Resume
-        run: ./build.sh
+        run: |
+          typst compile resume/main.typ --ignore-system-fonts --font-path="./resume/backend/fonts/" --input AAK_EMAIL="${{ secrets.AAK_EMAIL }}" --input AAK_PHONE="${{ secrets.AAK_PHONE }}"
+          mv resume/main.pdf app/home/resume.pdf
       - name: Download JetBrains Mono Font and Author Photo
         run: curl -L
           "https://github.com/JetBrains/JetBrainsMono/raw/refs/heads/master/fonts/webfonts/JetBrainsMono%5Bwght%5D.woff2"
