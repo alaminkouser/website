@@ -78,28 +78,34 @@ schedules. Features inside the pipeline include:
 
 ### Running FastAPI Locally
 
-1. Create a virtual environment and install dependencies:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   pip install -r requirements-dev.txt
-   ```
-2. Download the site font (JetBrains Mono):
-   ```bash
-   curl -L "https://github.com/JetBrains/JetBrainsMono/raw/refs/heads/master/fonts/webfonts/JetBrainsMono%5Bwght%5D.woff2" -o "app/home/main.woff2"
-   ```
-3. Ensure your environment variables are set up by creating a `.env` file (you
-   can copy from `.env.example`):
-   ```bash
-   cp .env.example .env
-   ```
-4. Start the FastAPI development server using `uvicorn`:
-   ```bash
-   uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
-   ```
-   The site layout should now be accessible spanning on
-   `http://127.0.0.1:8080/`.
+#### Create a virtual environment and install dependencies
+
+```sh
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+```
+
+#### Download the site font (JetBrains Mono)
+
+```sh
+curl -L "https://github.com/JetBrains/JetBrainsMono/raw/refs/heads/master/fonts/webfonts/JetBrainsMono%5Bwght%5D.woff2" -o "app/home/main.woff2"
+```
+
+#### Ensure your environment variables are set up by creating a `.env` file (you can copy from `.env.example`)
+
+```sh
+cp .env.example .env
+```
+
+#### Start the FastAPI development server using uvicorn
+
+```sh
+uvicorn app.main:app --reload --port 8080 --host 127.0.0.1 --env-file .env
+```
+
+The site layout should now be accessible spanning on `http://127.0.0.1:8080/`.
 
 ### Building the Integrations Locally
 
@@ -114,7 +120,8 @@ schedules. Features inside the pipeline include:
   ```
 
 - To compile the resume output locally quickly, run:
-  ```bash
-  typst compile resume/main.typ
-  mv resume/main.pdf app/home/resume.pdf
-  ```
+
+```sh
+typst compile resume/main.typ
+mv resume/main.pdf app/home/resume.pdf
+```
