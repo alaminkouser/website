@@ -1,8 +1,9 @@
 import os
 import firebase_admin
-from firebase_admin import credentials, firestore_async
+from firebase_admin import firestore_async
+from firebase_admin.credentials import Certificate
 
-cred = credentials.Certificate(
+cred = Certificate(
     {
         "type": os.getenv("FIREBASE_TYPE", ""),
         "project_id": os.getenv("FIREBASE_PROJECT_ID", ""),

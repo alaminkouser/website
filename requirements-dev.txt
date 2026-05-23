@@ -1,1 +1,2 @@
 black
+types-firebase-admin
