@@ -22,6 +22,10 @@
 
 #line(length: 100%, stroke: (paint: black, thickness: 0.25pt))
 
+== Career Objective
+
+#data.career_objective
+
 == Work Experiences
 
 #for experience in data.work_experiences [
