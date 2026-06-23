@@ -8,7 +8,7 @@ async def page_views(request: Request) -> None:
         {
             "created_at": firestore_async.SERVER_TIMESTAMP,
             "path": request.url.path,
-            "ip": request.client.host,
+            "ip": request.client.host if request.client else "0.0.0.0",
             "referer": request.headers.get("referer"),
             "user_agent": request.headers.get("user-agent"),
         }
