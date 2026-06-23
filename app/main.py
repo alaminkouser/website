@@ -24,7 +24,7 @@ app.include_router(
 )
 
 
-@app.get("/ssh-public-key.txt")
+@app.get("/ssh-public-key")
 async def ssh_public_key():
     return Response(content=os.getenv("SSH_PUBLIC_KEY", ""), media_type="text/plain")
 
