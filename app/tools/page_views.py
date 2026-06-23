@@ -7,7 +7,7 @@ async def page_views(request: Request) -> None:
     await db.collection("page_views").add(
         {
             "created_at": SERVER_TIMESTAMP,
-            "path": request.url.path + "TEST",
+            "path": request.url.path,
             "ip": request.client.host if request.client else "0.0.0.0",
             "referer": request.headers.get("referer"),
             "user_agent": request.headers.get("user-agent"),
