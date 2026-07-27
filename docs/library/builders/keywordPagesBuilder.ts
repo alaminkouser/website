@@ -30,7 +30,7 @@ export async function buildKeywordPages(
       .sort((a, b) => b.date.getTime() - a.date.getTime());
 
     const html = renderTemplate({
-      title: `KEYWORD: ${keyword}`,
+      title: `keywords/${keyword}`,
       pages: pagesForKeyword,
     });
 
