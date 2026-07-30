@@ -8,7 +8,6 @@ page_router = APIRouter()
 
 CACHE_CONTROL_HEADER_1M = {"Cache-Control": "max-age=60, immutable"}
 CACHE_CONTROL_HEADER_1H = {"Cache-Control": "public, max-age=3600, immutable"}
-CACHE_CONTROL_HEADER_1Y = {"Cache-Control": "public, max-age=31536000, immutable"}
 
 
 @page_router.get("{path:path}")
@@ -42,14 +41,7 @@ def page(request: Request, path: str, background_tasks: BackgroundTasks):
     ):
         return FileResponse(
             f"app/home{path}",
-            headers=(
-                CACHE_CONTROL_HEADER_1Y
-                if (
-                    path.startswith("/docs/pagefind/")
-                    and path.split(".")[-1] in ["pf_meta", "pf_index", "pf_fragment"]
-                )
-                else CACHE_CONTROL_HEADER_1H
-            ),
+            headers=(CACHE_CONTROL_HEADER_1H),
         )
 
     return not_found(request)
