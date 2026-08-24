@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% with title = "Account" %}{% include "templates/head.html" %}{% endwith %}
+  </head>
+  <body>
+    {% include "templates/nav.html" %}
+    <main>
+      <h1>Account</h1>
+      <form method="post">
+        <input type="email" name="email" />
+        <input type="submit" />
+      </form>
+    </main>
+    {% include "templates/footer.html" %}
+  </body>
+</html>
