@@ -1,14 +1,13 @@
 import os
-from fastapi import Request
-from fastapi import APIRouter, Response, Body
+from fastapi import Request, APIRouter, Response, Body
 import sshsig
 from app.tools.home import home
 from app.tools.redis_client import redis_client
 
-status_router = APIRouter()
+router_status = APIRouter()
 
 
-@status_router.get("/")
+@router_status.get("/")
 async def status_get(request: Request):
     status = await redis_client.get("status")
     html_string = home.get_template("status/index.html").render(
@@ -21,7 +20,7 @@ async def status_get(request: Request):
     )
 
 
-@status_router.put("/")
+@router_status.put("/")
 async def status_put(body: str = Body(...)) -> bool:
     message = body.split("\n")[0]
     signature = "\n".join(body.split("\n")[1:])

@@ -4,13 +4,13 @@ from fastapi.responses import FileResponse, Response
 from app.tools.home import home
 from app.tools.page_views import page_views
 
-page_router = APIRouter()
+router_page = APIRouter()
 
 CACHE_CONTROL_HEADER_1M = {"Cache-Control": "max-age=60, immutable"}
 CACHE_CONTROL_HEADER_1H = {"Cache-Control": "public, max-age=3600, immutable"}
 
 
-@page_router.get("{path:path}")
+@router_page.get("{path:path}")
 def page(request: Request, path: str, background_tasks: BackgroundTasks):
     def not_found(request: Request):
         html_string = home.get_template("templates/404.html").render(request=request)

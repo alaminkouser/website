@@ -7,8 +7,9 @@ from fastapi import status
 from .tools.query_parameter_removal_middleware import QueryParameterRemovalMiddleware
 from .tools.minify_middleware import MinifyMiddleware
 from .tools.home import home
-from .routes.status.index import status_router
-from .routes.page import page_router
+from .routes.account.index import router_account
+from .routes.status.index import router_status
+from .routes.page import router_page
 
 app = FastAPI(title="AL AMIN KOUSER", docs_url=None, redoc_url=None, openapi_url=None)
 
@@ -20,7 +21,11 @@ app.add_middleware(MinifyMiddleware)
 app.add_middleware(GZipMiddleware, minimum_size=0, compresslevel=9)
 
 app.include_router(
-    status_router, prefix="/status", tags=["status"], include_in_schema=False
+    router_account, prefix="/account", tags=["account"], include_in_schema=False
+)
+
+app.include_router(
+    router_status, prefix="/status", tags=["status"], include_in_schema=False
 )
 
 
@@ -29,7 +34,7 @@ async def ssh_public_key():
     return Response(content=os.getenv("SSH_PUBLIC_KEY", ""), media_type="text/plain")
 
 
-app.include_router(page_router, prefix="", tags=["page"], include_in_schema=False)
+app.include_router(router_page, prefix="", tags=["page"], include_in_schema=False)
 
 
 @app.exception_handler(RequestValidationError)
