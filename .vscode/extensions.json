@@ -3,6 +3,7 @@
     "ms-python.python",
     "esbenp.prettier-vscode",
     "samuelcolvin.jinjahtml",
-    "myriad-dreamin.tinymist"
+    "myriad-dreamin.tinymist",
+    "denoland.vscode-deno"
   ]
 }
