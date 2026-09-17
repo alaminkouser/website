@@ -44,9 +44,10 @@ jobs:
           echo '{
             "args": ["--no-sandbox", "--disable-setuid-sandbox"]
           }' > puppeteer-config.json
+          echo '{"theme":"default","themeVariables":{"fontFamily":"main"}}' > mermaid-config.json
           find ./docs/source -type f -name "*.md" -exec sh -c '
             for f; do
-              mmdc -i "$f" -o "$f" -b transparent --puppeteerConfigFile puppeteer-config.json
+              mmdc -i "$f" -o "$f" -b transparent --puppeteerConfigFile puppeteer-config.json -C mermaid-config.json
             done
           ' sh {} +
 
