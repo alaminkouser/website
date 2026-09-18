@@ -1,6 +1,6 @@
 name: "Al Amin Kouser"
 affiliation: "Maritime & Legal Researcher"
-address: "Mirpur- 1, Dhaka"
+address: "Mirpur 1, Dhaka"
 github: "alaminkouser"
 linkedin: "alaminkouser"
 orcid: "0000-0002-0215-3372"
@@ -51,4 +51,14 @@ work_experiences:
       significantly streamlined patent research processes, providing users with
       efficient access to patent data for various purposes, including analysis,
       innovation, and legal requirements.
+  - company: "Ricciwawa"
+    title: "Flutter Developer & Project Manager"
+    type: "Part-Time"
+    location: "Hong Kong (Remote)"
+    start_date: "2021-04-01"
+    end_date: "2022-06-30"
+    description: >
+      At Ricciwawa, led a team as Project Manager and Flutter Developer for a
+      Chinese learning app. Wrote test cases, ensuring reliable user
+      experiences.
 education:

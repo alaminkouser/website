@@ -1,7 +1,7 @@
 #let backend(DOC) = {
   set page(
     paper: "a4",
-    margin: 0.75in,
+    margin: 1.5cm,
   )
 
   show outline: outline_setup => {
@@ -16,9 +16,9 @@
 
   show heading.where(level: 1): set block(above: 0pt, below: 0.25em)
 
-  show heading.where(level: 2): set block(above: 0.25em, below: 0.25em)
+  show heading.where(level: 2): set block(above: 0.5em, below: 0.5em)
 
-  show heading.where(level: 3): set block(above: 0.25em, below: 0.25em)
+  show heading.where(level: 3): set block(above: 0.5em, below: 0.5em)
 
   set par(
     first-line-indent: 0pt,

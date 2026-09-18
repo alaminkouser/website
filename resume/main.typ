@@ -29,8 +29,9 @@
 == Work Experiences
 
 #for experience in data.work_experiences [
-  === #experience.title
-  #experience.company (#experience.location);
+  === #experience.title --- #text(weight: 100, style: "italic")[
+    #experience.company (#experience.location)
+  ]
   #datetime(
     year: int(experience.start_date.split("-").at(0)),
     month: int(experience.start_date.split("-").at(1)),
@@ -51,3 +52,5 @@
 ]
 
 == Education
+
+
