@@ -19,7 +19,31 @@
   show heading.where(level: 1): set text(size: 1.5em)
   show heading.where(level: 1): set block(above: 0pt, below: 0.25em)
 
-  show heading.where(level: 2): set block(above: 0.75em, below: 0.5em)
+  show heading.where(level: 2): it => block(
+    above: 0.75em,
+    below: 0.5em,
+  )[
+    #grid(
+      columns: (1fr, auto, 1fr),
+      align: horizon,
+      gutter: 0.5em,
+      line(
+        length: 100%,
+        stroke: (
+          thickness: 0.75pt,
+          paint: gradient.linear(gray, black),
+        ),
+      ),
+      text[#it.body],
+      line(
+        length: 100%,
+        stroke: (
+          thickness: 0.75pt,
+          paint: gradient.linear(black, gray),
+        ),
+      ),
+    )
+  ]
 
   show heading.where(level: 3): set block(above: 0.75em, below: 0.5em)
 

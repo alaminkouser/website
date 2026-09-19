@@ -1,9 +1,9 @@
 #import "backend/index.typ": backend
 #import "sections/001-header.typ": header
 #import "sections/002-professional-summary.typ": professional-summary
-#import "sections/003-work-experiences.typ": work-experiences
-#import "sections/004-certificates-and-trainings.typ": certificates-and-trainings
-
+#import "sections/003-technical-skills.typ": technical-skills
+#import "sections/004-work-experiences.typ": work-experiences
+#import "sections/007-certificates-and-trainings.typ": certificates-and-trainings
 
 #show: backend
 
@@ -11,6 +11,6 @@
 
 #show: header.with(data)
 #show: professional-summary.with(data)
+#show: technical-skills.with(data)
 #show: work-experiences.with(data)
 #show: certificates-and-trainings.with(data)
-

@@ -11,6 +11,32 @@ website:
 professional_summary: >
   Test *bold*
 
+technical_skills:
+  - domain: "Languages"
+    items:
+      - Python
+      - JavaScript/TypeScript
+      - HTML
+      - CSS
+      - Zig
+      - Go
+      - Dart
+      - SQL
+      - Bash Scripting
+      - Lua
+  - domain: "Database"
+    items:
+      - PostgreSQL
+      - SQLite
+      - MongoDB
+      - Redis
+      - Firestore
+      - Weaviate
+      - SurrealDB
+      - Qdrant
+      - ElasticSearch
+      - PGlite
+
 work_experiences:
   - company: "Makebell"
     title: "Software Engineer"
