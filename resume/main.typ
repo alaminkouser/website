@@ -13,3 +13,4 @@
 #show: professional-summary.with(data)
 #show: work-experiences.with(data)
 #show: certificates-and-trainings.with(data)
+

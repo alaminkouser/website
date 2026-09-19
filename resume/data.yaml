@@ -7,17 +7,10 @@ orcid: "0000-0002-0215-3372"
 website:
   url: "https://alaminkouser.com/"
   view: "alaminkouser.com"
+
 professional_summary: >
-  Driven Master of Laws (LL.M) graduate specializing in Maritime Law, with
-  professional experience developing advanced patent search engines and
-  research-tech solutions for law firms and academic institutions. Leveraging a
-  strong technical foundation in computer programming, I specialize in
-  tech-legal research, utilizing data-driven model predictions and expertise in
-  GDPR and data transparency to address modern legal challenges. Seeking a
-  faculty role to work with new legal technologies and research, while gaining
-  new academic insights to stay updated on changing laws. I aim to provide tech
-  forward legal education while advancing the university's output in modern
-  legal research.
+  Test *bold*
+
 work_experiences:
   - company: "Makebell"
     title: "Software Engineer"
@@ -26,7 +19,7 @@ work_experiences:
     start_date: "2023-05-01"
     end_date: "2026-05-20"
     description:
-      - Item 1
+      - This is a *bold* text and this is _italic_
       - Item 2
 
   - company: "Petapator"

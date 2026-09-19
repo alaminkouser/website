@@ -1,7 +1,7 @@
 #let professional-summary(data, BODY) = {
   [
     == Professional Summary
-    #data.professional_summary
+    #eval(data.professional_summary, mode: "markup")
   ]
   BODY
 }

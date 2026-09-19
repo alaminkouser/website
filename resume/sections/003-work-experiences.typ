@@ -25,7 +25,7 @@
         ]
       ]
       #for description in experience.description [
-        - #description
+        - #eval(description, mode: "markup")
       ]
     ]
   ]
