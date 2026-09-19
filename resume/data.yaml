@@ -88,8 +88,8 @@ projects_and_open_source_contributions:
         latency* dynamic page delivery."
       - "Reduced static asset payloads by *~40%* via automated *GitHub Actions*
         minification pipelines."
-      - "Automated resume compilation using *Typst & CI/CD*, eliminating manual
-        PDF generation entirely."
+      - "Automated *resume* compilation using *Typst & CI/CD*, eliminating
+        manual PDF generation entirely."
       - "Architected a custom *Deno static doc builder* with integrated
         *Pagefind search* and *Mermaid diagrams*."
 
