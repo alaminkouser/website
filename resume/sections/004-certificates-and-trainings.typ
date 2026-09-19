@@ -12,7 +12,7 @@
           year: int(item.date.split("-").at(0)),
           month: int(item.date.split("-").at(1)),
           day: int(item.date.split("-").at(2)),
-        ).display("[month repr:long] [day], [year]")
+        ).display("[month repr:long] [year]")
       ]
   ]
   BODY
