@@ -24,8 +24,10 @@
           ]
         ]
       ]
-      #for description in experience.description [
-        - #eval(description, mode: "markup")
+      #pad(left: 0.5em)[
+        #for description in experience.description [
+          - #eval(description, mode: "markup")
+        ]
       ]
     ]
   ]

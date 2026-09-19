@@ -5,14 +5,14 @@
     = #data.name
     #text(data.title, size: 1.25em)\
     \u{f015} #data.address\
-    #link("tel:" + phone)[\u{f095} #phone]
-    #link("mailto:" + email)[\u{f0e0} #email]
+    #link("tel:" + phone)[\u{f095} #phone] ~~~
+    #link("mailto:" + email)[\u{f0e0} #email] ~~~
     #link(data.website.url)[\u{f0ac} #data.website.view]\
-    #link("https://www.linkedin.com/in/" + data.linkedin + "/")[\u{f08c} linkedin.com/in/#data.linkedin]
+    #link("https://www.linkedin.com/in/" + data.linkedin + "/")[\u{f08c} linkedin.com/in/#data.linkedin] ~~~
     #link("https://github.com/" + data.github)[\u{f09b} github.com/#data.github]
   ]
   grid(
-    columns: (3fr, 1fr),
+    columns: (2fr, 1fr),
     gutter: 1em,
     [
       #profile
