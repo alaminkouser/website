@@ -24,6 +24,7 @@ technical_skills:
       - SQL
       - Bash Scripting
       - Lua
+
   - domain: "Database"
     items:
       - PostgreSQL
@@ -67,6 +68,21 @@ work_experiences:
     description:
       - Item C 1
       - Item C 2
+
+education:
+  - degree: "LL.M. in Maritime Law"
+    institution: "Bangladesh Maritime University"
+    start_date: "2024"
+    end_date: "2025"
+    cgpa: "3.78 / 4.00"
+    honor: "Ranked 1st out of 26 students"
+
+  - degree: "LL.B. (Honours) in Maritime Law"
+    institution: "Bangladesh Maritime University"
+    start_date: "2019"
+    end_date: "2023"
+    cgpa: "3.65 / 4.00"
+    honor: "Ranked 3rd out of 35 students"
 
 certificates_and_trainings:
   - name: "The Bits and Bytes of Computer Networking"

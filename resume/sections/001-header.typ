@@ -12,7 +12,7 @@
     #link("https://github.com/" + data.github)[\u{f09b} github.com/#data.github]
   ]
   grid(
-    columns: (2fr, 1fr),
+    columns: (1fr, auto),
     gutter: 1em,
     [
       #profile
