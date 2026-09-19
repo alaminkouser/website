@@ -93,6 +93,17 @@ projects_and_open_source_contributions:
       - "Architected a custom *Deno static doc builder* with integrated
         *Pagefind search* and *Mermaid diagrams*."
 
+  - title: "EyeDropper"
+    tech_stack:
+      - JavaScript
+      - Manifest V3
+      - Chrome APIs
+    date: "2025"
+    link: "https://chromewebstore.google.com/detail/eyedropper/ljmofdkgedkfhemamfahgebklnnmjaeo"
+    highlights:
+      - "Published browser extension on *Chrome Web Store* to enable color
+        picking and hex extraction from active web pages."
+
   - title: "ArchWiki"
     tech_stack:
       - Linux
