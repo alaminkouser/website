@@ -1,5 +1,5 @@
 name: "Al Amin Kouser"
-affiliation: "Maritime & Legal Researcher"
+affiliation: "Software Engineer"
 address: "Mirpur 1, Dhaka"
 github: "alaminkouser"
 linkedin: "alaminkouser"
@@ -7,7 +7,7 @@ orcid: "0000-0002-0215-3372"
 website:
   url: "https://alaminkouser.com/"
   view: "alaminkouser.com"
-career_objective: >
+professional_summary: >
   Driven Master of Laws (LL.M) graduate specializing in Maritime Law, with
   professional experience developing advanced patent search engines and
   research-tech solutions for law firms and academic institutions. Leveraging a
@@ -25,40 +25,27 @@ work_experiences:
     location: "Hong Kong (Remote)"
     start_date: "2023-05-01"
     end_date: "2026-05-20"
-    description: >
-      Empowered a collaborative development environment as a full-stack
-      developer. Designed, developed, and deployed user-friendly websites and
-      secure APIs using Node.js (Express.js preferred) and Python (Flask)
-      frameworks. Ensured a seamless user experience through close collaboration
-      with designers. Additionally, integrated Stripe for secure payments,
-      implemented serverless functions with Firebase Functions, and managed
-      cloud infrastructure on Google Cloud Platform and App Engine. Leveraged
-      CI/CD pipelines with GitHub Actions to automate deployments to App Engine,
-      streamlining version control and ensuring efficient releases.
+    description:
+      - Item 1
+      - Item 2
+
   - company: "Petapator"
     title: "Full Stack Developer"
     type: "Part-Time"
     location: "Hong Kong (Remote)"
     start_date: "2022-07-01"
     end_date: "2026-05-20"
-    description: >
-      As a Chrome Extension Developer at Petapator, I was instrumental in
-      conceiving and creating a powerful Chrome extension tailored for patent
-      enthusiasts and professionals. The extension seamlessly facilitated the
-      bulk download of patents from various reputable sources, including Google
-      Patents, WIPO (World Intellectual Property Organization), USPTO (United
-      States Patent and Trademark Office), and Espacenet. This innovative tool
-      significantly streamlined patent research processes, providing users with
-      efficient access to patent data for various purposes, including analysis,
-      innovation, and legal requirements.
+    description:
+      - Item B 1
+      - Item B 2
+
   - company: "Ricciwawa"
     title: "Flutter Developer & Project Manager"
     type: "Part-Time"
     location: "Hong Kong (Remote)"
     start_date: "2021-04-01"
     end_date: "2022-06-30"
-    description: >
-      At Ricciwawa, led a team as Project Manager and Flutter Developer for a
-      Chinese learning app. Wrote test cases, ensuring reliable user
-      experiences.
+    description:
+      - Item C 1
+      - Item C 2
 education:

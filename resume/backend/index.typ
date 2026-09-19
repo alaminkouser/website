@@ -9,11 +9,6 @@
     outline_setup
   }
 
-  show heading.where(level: 1): it => {
-    pagebreak(weak: true)
-    align(center, it)
-  }
-
   show heading.where(level: 1): set block(above: 0pt, below: 0.25em)
 
   show heading.where(level: 2): set block(above: 0.5em, below: 0.5em)
