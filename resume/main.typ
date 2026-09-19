@@ -18,4 +18,3 @@
 #show: projects-and-open-source-contributions.with(data)
 #show: education.with(data)
 #show: certificates-and-trainings.with(data)
-

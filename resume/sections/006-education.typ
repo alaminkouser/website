@@ -12,7 +12,7 @@
           #text(style: "italic")[#item.start_date --- #item.end_date]
         ],
       )
-      #text(size: 0.9em, fill: luma(60))[
+      #text(size: 0.9em)[
         CGPA: #item.cgpa (#item.honor)
       ]
     ]
