@@ -86,7 +86,7 @@ projects_and_open_source_contributions:
     highlights:
       - "Engineered *FastAPI/Vercel* serverless web app, achieving *near-zero
         latency* dynamic page delivery."
-      - "Reduced static asset payloads by *~40%* via automated *GitHub Actions*
+      - "Reduced static asset payloads by *40%* via automated *GitHub Actions*
         minification pipelines."
       - "Automated *resume* compilation using *Typst & CI/CD*, eliminating
         manual PDF generation entirely."
