@@ -70,33 +70,49 @@ work_experiences:
       - Item C 2
 
 projects_and_open_source_contributions:
-  - title: "Personal App / System Name"
-    type: "Personal Project"
-    tech_stack: ["Flutter", "Dart", "SQLite"]
-    date: "2023 --- Present"
-    link: "https://example.com"
+  - title: "Personal Website"
+    tech_stack:
+      - FastAPI
+      - Deno
+      - Jinja2
+      - Redis
+      - Firestore
+      - Pagefind
+      - Typst
+      - Vercel
+      - GitHub Actions
+    date: "2025 --- Present"
+    link: "https://alaminkouser.com/"
     highlights:
-      - "Architected and published full-stack application across Google Play and
-        App Store."
-      - "Optimized local database caching using SQLite, reducing startup latency
-        by 40%."
+      - "Engineered *FastAPI/Vercel* serverless web app, achieving *near-zero
+        latency* dynamic page delivery."
+      - "Reduced static asset payloads by *~40%* via automated *GitHub Actions*
+        minification pipelines."
+      - "Automated resume compilation using *Typst & CI/CD*, eliminating manual
+        PDF generation entirely."
+      - "Architected a custom *Deno static doc builder* with integrated
+        *Pagefind search* and *Mermaid diagrams*."
 
-  - title: "ArchWiki Documentation"
-    type: "Open Source"
-    tech_stack: ["ONE"]
-    date: "2023 --- Present"
-    link: "https://wiki.archlinux.org"
-    highlights:
-      - "Authored and maintained technical guides for Linux system setup and
-        configuration."
-
-  - title: "FastAPI / Open Source Repo"
-    type: "Open Source"
-    tech_stack: ["Python", "FastAPI"]
+  - title: "ArchWiki"
+    tech_stack:
+      - Linux
+      - Bash
+      - Sway
+      - Wayland
     date: "2024"
-    link: "https://github.com/owner/repo-name"
+    link: "https://wiki.archlinux.org/index.php?title=Sway&diff=prev&oldid=817528"
     highlights:
-      - "Fixed async session management memory leaks in core routing module."
+      - "Fixed *SSH session startup errors* in ArchWiki's *Sway* login guide by
+        refactoring POSIX shell variable checks."
+
+  - title: "Karl Seguin's Blog (openmymind.net)"
+    tech_stack:
+      - Zig
+    date: "2024"
+    link: "https://github.com/karlseguin/blog/commit/925bbae59f12cc8020baa44b09056f7e7f886535"
+    highlights:
+      - "Corrected method accessibility in *Zig learning tutorials* to resolve
+        code execution errors."
 
 education:
   - degree: "LL.M. in Maritime Law"
