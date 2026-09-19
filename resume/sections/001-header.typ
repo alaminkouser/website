@@ -26,6 +26,13 @@
       }
     ],
   )
-  line(length: 100%, stroke: (paint: black, thickness: 0.25pt))
+  line(
+    length: 100%,
+    stroke: gradient.linear(
+      rgb("#000000"),
+      rgb("#bbbbbb"),
+      rgb("#ffffff"),
+    ),
+  )
   BODY
 }
