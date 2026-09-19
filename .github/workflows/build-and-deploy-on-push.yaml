@@ -24,6 +24,7 @@ jobs:
       - uses: typst-community/setup-typst@v5
       - name: Build Resume
         run: |
+          curl -L "https://github.com/alaminkouser.png" -o "resume/avatar.jpeg"
           typst compile resume/main.typ --ignore-system-fonts --font-path="./resume/backend/fonts/" --input AAK_EMAIL="${{ secrets.AAK_EMAIL }}" --input AAK_PHONE="${{ secrets.AAK_PHONE }}"
           mv resume/main.pdf app/home/resume.pdf
       - name: Download JetBrains Mono Font and Author Photo

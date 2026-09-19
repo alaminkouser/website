@@ -7,7 +7,7 @@
 #let AAK_PHONE = sys.inputs.at("AAK_PHONE", default: "[AAK_PHONE]")
 
 #grid(
-  columns: 2,
+  columns: 3,
   gutter: 1em,
   [
     = #data.name
@@ -20,8 +20,9 @@
     #link("https://github.com/" + data.github)[\u{f09b} #data.github]
 
   ],
+  h(1fr),
   [
-    RIGHT ALIGN
+    #image("avatar.jpeg", height: 14%)
   ],
 )
 
