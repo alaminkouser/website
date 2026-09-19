@@ -7,7 +7,13 @@
       ---
       #item.provider
       #h(1fr)
-      #text(style: "italic")[#item.date]
+      #text(style: "italic")[
+        #datetime(
+          year: int(item.date.split("-").at(0)),
+          month: int(item.date.split("-").at(1)),
+          day: int(item.date.split("-").at(2)),
+        ).display("[month repr:long] [day], [year]")
+      ]
   ]
   BODY
 }

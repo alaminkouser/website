@@ -28,10 +28,13 @@
   )
   line(
     length: 100%,
-    stroke: gradient.linear(
-      rgb("#000000"),
-      rgb("#bbbbbb"),
-      rgb("#ffffff"),
+    stroke: (
+      paint: gradient.linear(
+        rgb("#000000"),
+        rgb("#bbbbbb"),
+        rgb("#ffffff"),
+      ),
+      thickness: 0.5pt,
     ),
   )
   BODY
