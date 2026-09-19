@@ -6,27 +6,32 @@
 #let AAK_EMAIL = sys.inputs.at("AAK_EMAIL", default: "[AAK_EMAIL]")
 #let AAK_PHONE = sys.inputs.at("AAK_PHONE", default: "[AAK_PHONE]")
 
+#let profile = [
+  = #data.name
+  #text(data.title, size: 1.25em)\
+  \u{f015} #data.address\
+  #link("tel:" + AAK_PHONE)[\u{f095} #AAK_PHONE]\
+  #link("mailto:" + AAK_EMAIL)[\u{f0e0} #AAK_EMAIL]\
+  #link(data.website.url)[\u{f0ac} #data.website.view]\
+  #link("https://www.linkedin.com/in/" + data.linkedin + "/")[\u{f08c} linkedin.com/in/#data.linkedin]\
+  #link("https://github.com/" + data.github)[\u{f09b} github.com/#data.github]
+]
+
 #grid(
-  columns: 3,
+  columns: (1fr, 1fr),
   gutter: 1em,
   [
-    = #data.name
-    #data.affiliation\
-    \u{f015} #data.address\
-    #link("tel:" + AAK_PHONE)[\u{f095} #AAK_PHONE]\
-    #link("mailto:" + AAK_EMAIL)[\u{f0e0} #AAK_EMAIL]\
-    #link(data.website.url)[\u{f0ac} #data.website.view]\
-    #link("https://linkedin.com/in/" + data.linkedin + "/")[\u{f08c} #data.linkedin]\
-    #link("https://github.com/" + data.github)[\u{f09b} #data.github]
-
+    #profile
   ],
-  h(1fr),
   [
-    #image("avatar.jpeg", height: 14%)
+    #context {
+      align(
+        right + horizon,
+        image("avatar.jpeg", height: measure(profile).height),
+      )
+    }
   ],
 )
-
-
 
 #line(length: 100%, stroke: (paint: black, thickness: 0.25pt))
 
