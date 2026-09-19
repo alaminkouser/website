@@ -6,15 +6,8 @@
         columns: (1fr, auto),
         align: (left, right),
         [
-          #text(weight: "bold")[#item.title]
-          #if "role" in item [
-            --- #text(style: "italic")[#item.role]
-          ] else if "tech_stack" in item [
-            --- #text(style: "italic", size: 0.9em)[#item.tech_stack.join(", ")]
-          ]
-          #if "link" in item [
-            #h(0.3em) #link(item.link)[]
-          ]
+          #link(item.link)[*#item.title* \u{eb15}]
+          --- #text(style: "italic", size: 0.9em)[#item.tech_stack.join(", ")]
         ],
         [
           #text(style: "italic")[#eval(item.date, mode: "markup")]

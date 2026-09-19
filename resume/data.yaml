@@ -25,7 +25,7 @@ technical_skills:
       - Bash Scripting
       - Lua
 
-  - domain: "Database"
+  - domain: "Databases"
     items:
       - PostgreSQL
       - SQLite
@@ -83,7 +83,7 @@ projects_and_open_source_contributions:
 
   - title: "ArchWiki Documentation"
     type: "Open Source"
-    role: "Documentation Contributor"
+    tech_stack: ["ONE"]
     date: "2023 --- Present"
     link: "https://wiki.archlinux.org"
     highlights:

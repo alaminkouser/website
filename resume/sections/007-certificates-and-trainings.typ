@@ -3,7 +3,7 @@
     == Certificates & Trainings
   ]
   for item in data.certificates_and_trainings [
-    - #link(item.link)[#item.name \u{eb15}]
+    - #link(item.link)[*#item.name* \u{eb15}]
       ---
       #item.provider
       #h(1fr)
