@@ -1,4 +1,11 @@
 #let backend(DOC) = {
+  set document(
+    title: [AL AMIN KOUSER | RESUME],
+    author: "AL AMIN KOUSER",
+    description: "Resume of Al Amin Kouser.",
+    keywords: ("resume", "cv", "curriculum vitae"),
+    date: datetime.today(),
+  )
   set page(
     paper: "a4",
     margin: 1.5cm,
