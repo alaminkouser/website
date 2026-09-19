@@ -48,4 +48,19 @@ work_experiences:
     description:
       - Item C 1
       - Item C 2
-education:
+
+certificates_and_trainings:
+  - name: "The Bits and Bytes of Computer Networking"
+    date: "2021-04-08"
+    link: "https://coursera.org/verify/N93AFD9MDURV"
+    provider: "Google"
+
+  - name: "Getting Started With Google Apps Script"
+    date: "2021-01-29"
+    link: "https://coursera.org/verify/UM6GRACM3BNA"
+    provider: "Coursera Project Network"
+
+  - name: "Technical Support Fundamentals"
+    date: "2020-09-28"
+    link: "https://coursera.org/verify/3EZ95KS7D2JE"
+    provider: "Google"
