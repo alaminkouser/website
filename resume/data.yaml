@@ -38,6 +38,44 @@ technical_skills:
       - ElasticSearch
       - PGlite
 
+  - domain: "Frameworks"
+    items:
+      - FastAPI
+      - Pydantic AI
+      - Jinja2
+      - LangChain
+      - Express.js
+      - Streamlit
+      - Flask
+      - Flutter
+      - Next.js
+      - Svelte
+      - Astro
+
+  - domain: "Tools & Infrastructure"
+    items:
+      - Git
+      - GCP
+      - GitHub Actions
+      - CI/CD
+      - Nginx Proxy Manager
+      - Caddy
+      - Linux Shell
+
+  - domain: "Architecture & Methodologies"
+    items:
+      - "RESTful APIs & GraphQL"
+      - "Microservices Architecture"
+      - Test-Driven Development
+      - Agile / Scrum
+      - "System Design & Data Modeling"
+
+  - domain: "Platforms & App Development"
+    items:
+      - Desktop Application Frameworks (Electron)
+      - Browser Extensions (Manifest V3)
+      - Mobile Development (Flutter)
+
 work_experiences:
   - company: "Makebell"
     title: "Software Engineer"
@@ -66,8 +104,23 @@ work_experiences:
     start_date: "2021-04-01"
     end_date: "2022-06-30"
     description:
-      - Item C 1
-      - Item C 2
+      - Engineered an automated server health monitoring pipeline using *Bash*
+        scripting and custom email notification systems, reducing *mean time to
+        detection (MTTD)* for backend endpoint failures and enabling immediate
+        developer triage.
+      - Managed end-to-end delivery of *Flutter* mobile applications and
+        *Django* APIs as Project Manager, optimizing sprint velocity and on-time
+        release schedules through *Trello* task allocation, effort estimation,
+        and structured test plan execution.
+      - Orchestrated a *zero-downtime server migration* across *Google Cloud
+        Platform (GCP)* projects, ensuring uninterrupted production availability
+        and system stability.
+      - Automated frontend deployment pipelines by architecting a *GCP CI/CD*
+        workflow for a modern *React* web application, eliminating manual
+        release overhead.
+      - Accelerated quality assurance across mobile and web backends by
+        designing *standardized test case frameworks* to systematically catch
+        and trace system edge cases prior to release.
 
 projects_and_open_source_contributions:
   - title: "Zero Agent Demo"
