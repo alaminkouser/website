@@ -196,7 +196,7 @@ projects_and_open_source_contributions:
         hours to minutes* by automating Google Patent retrieval and AI relevance
         sorting."
       - "Planned as a *standalone desktop utility* to *expand on the concepts*
-        of the *Patnet Search Chrome Extension* with advanced local workflow
+        of the *Patent Search Chrome Extension* with advanced local workflow
         tools."
       - "Engineered an offline-first architecture leveraging *PGlite* and
         *Electron* for lightweight local data management."
