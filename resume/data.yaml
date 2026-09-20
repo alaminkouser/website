@@ -94,8 +94,14 @@ work_experiences:
     start_date: "2022-07-01"
     end_date: "2023-05-20"
     description:
-      - Item B 1
-      - Item B 2
+      - Maintained a *4.7/5 rating* on the *Chrome Web Store* by engineering an
+        *AI-driven patent research extension* that automates analysis and
+        relevance scoring.
+      - Streamlined research workflows by enabling users to query *patent
+        datasets* and export *scored result sets* directly into *CSV format*.
+      - Implemented *secure Firebase Authentication* compliant with *Chrome Web
+        Store Manifest V3* security standards, overcoming platform-specific auth
+        constraints for extension environments.
 
   - company: "Ricciwawa"
     title: "Flutter Developer & Project Manager"
