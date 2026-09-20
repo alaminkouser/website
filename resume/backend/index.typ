@@ -20,8 +20,8 @@
   show heading.where(level: 1): set block(above: 0pt, below: 0.25em)
 
   show heading.where(level: 2): it => block(
-    above: 0.75em,
-    below: 0.5em,
+    above: 1em,
+    below: 1em,
   )[
     #grid(
       columns: (1fr, auto, 1fr),
@@ -45,13 +45,11 @@
     )
   ]
 
-  show heading.where(level: 3): set block(above: 0.75em, below: 0.5em)
-
   set par(
     first-line-indent: 0pt,
     justify: true,
-    leading: 0.5em,
-    spacing: 0.5em,
+    leading: 0.75em,
+    spacing: 1em,
   )
 
   set text(

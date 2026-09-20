@@ -9,7 +9,12 @@ website:
   view: "alaminkouser.com"
 
 professional_summary: >
-  Test *bold*
+  Full-Stack Software Engineer with over 5 years of experience building scalable
+  web applications, agentic AI systems, and cross-platform desktop utilities.
+  Proven track record in designing high-performance RAG pipelines, custom Model
+  Context Protocol (MCP) servers, and zero-downtime GCP infrastructure using
+  Python (FastAPI, Flask), JavaScript/TypeScript (Next.js, Node.js), and modern
+  vector databases.
 
 technical_skills:
   - domain: "Languages"
@@ -84,8 +89,16 @@ work_experiences:
     start_date: "2023-05-01"
     end_date: "2026-05-20"
     description:
-      - This is a *bold* text and this is _italic_
-      - Item 2
+      - Architected multi-persona *AI chatbots* for university students,
+        faculty, and administrative staff, streamlining campus-wide information
+        retrieval and support workflows.
+      - Engineered a high-performance *RAG pipeline* by indexing university
+        academic papers in *Vector Databases*, reducing literature search times
+        by hours through semantic query matching.
+      - Built autonomous *AI agents using LangGraph* to streamline patent
+        drafting and novelty verification.
+      - Developed a custom *Model Context Protocol (MCP) server* to index and
+        query *US Patent datasets* seamlessly within agentic research workflows.
 
   - company: "Petapator"
     title: "Full Stack Developer"
