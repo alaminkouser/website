@@ -2,7 +2,7 @@
   [
     == Work Experiences
     #for experience in data.work_experiences [
-      === #experience.title #text(weight: "regular")[
+      #text(weight: "bold")[#experience.title] #text(weight: "regular")[
         ---
         #experience.company | #text(experience.location, style: "italic")
         #h(1fr)
