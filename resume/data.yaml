@@ -82,7 +82,7 @@ projects_and_open_source_contributions:
       - Vercel
       - GitHub Actions
     date: "2025 --- Present"
-    link: "https://alaminkouser.com/"
+    link: "https://github.com/alaminkouser/website"
     highlights:
       - "Engineered *FastAPI/Vercel* serverless web app, achieving *near-zero
         latency* dynamic page delivery."
@@ -92,6 +92,23 @@ projects_and_open_source_contributions:
         manual PDF generation entirely."
       - "Architected a custom *Deno static doc builder* with integrated
         *Pagefind search* and *Mermaid diagrams*."
+
+  - title: "PetapatorDemo"
+    tech_stack:
+      - Electron
+      - Node.js
+      - PGlite
+    date: "2026"
+    link: "https://apps.microsoft.com/detail/9nszmtgs768p"
+    highlights:
+      - "Built a desktop demo application that *cuts patent research time from
+        hours to minutes* by automating Google Patent retrieval and AI relevance
+        sorting."
+      - "Planned as a *standalone desktop utility* to *expand on the concepts*
+        of the *Patnet Search Chrome Extension* with advanced local workflow
+        tools."
+      - "Engineered an offline-first architecture leveraging *PGlite* and
+        *Electron* for lightweight local data management."
 
   - title: "EyeDropper"
     tech_stack:
