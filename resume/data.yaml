@@ -70,7 +70,31 @@ work_experiences:
       - Item C 2
 
 projects_and_open_source_contributions:
+  - title: "Zero Agent Demo"
+    hidden: false
+    tech_stack:
+      - Pydantic AI
+      - FastMCP
+      - LLama CPP
+      - Playwright
+      - REST APIs
+      - MCP
+      - SerpAPI
+    date: "2026 --- Present"
+    link: "https://github.com/alaminkouser/zero"
+    highlights:
+      - "Engineered a *Local Agentic Application* using *Pydantic AI* and
+        *FastMCP*, connecting a *LLama CPP* model to custom toolsets and
+        external APIs."
+      - "Integrated *Model Context Protocol (MCP)* with toolchains including
+        *Playwright* browser automation, *SerpAPI*, *Firecrawl*, and *Vault* for
+        secure context retrieval."
+      - "Built custom *Python function-calling modules* for automated email
+        parsing and HTTP status updates, exposed through a *lightweight web
+        interface*."
+
   - title: "Personal Website"
+    hidden: false
     tech_stack:
       - FastAPI
       - Deno
@@ -94,6 +118,7 @@ projects_and_open_source_contributions:
         *Pagefind search* and *Mermaid diagrams*."
 
   - title: "PetapatorDemo"
+    hidden: false
     tech_stack:
       - Electron
       - Node.js
@@ -111,6 +136,7 @@ projects_and_open_source_contributions:
         *Electron* for lightweight local data management."
 
   - title: "EyeDropper"
+    hidden: true
     tech_stack:
       - JavaScript
       - Manifest V3
@@ -122,6 +148,7 @@ projects_and_open_source_contributions:
         picking and hex extraction from active web pages."
 
   - title: "ArchWiki"
+    hidden: true
     tech_stack:
       - Linux
       - Bash
@@ -134,6 +161,7 @@ projects_and_open_source_contributions:
         refactoring POSIX shell variable checks."
 
   - title: "Karl Seguin's Blog (openmymind.net)"
+    hidden: true
     tech_stack:
       - Zig
     date: "2024"
