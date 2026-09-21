@@ -10,6 +10,9 @@
 #show: backend
 
 #let data = yaml("./data.yaml")
+#pdf.attach(
+  "./data.yaml",
+)
 
 #show: header.with(data)
 #show: professional-summary.with(data)
