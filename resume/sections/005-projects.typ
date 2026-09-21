@@ -7,7 +7,7 @@
           columns: (1fr, auto),
           align: (left, right),
           [
-            #link(item.link)[*#item.title* \u{eb15}]
+            #link(item.link)[*#item.title* \u{f0337}]
             --- #text(style: "italic", size: 0.9em)[#item.tech_stack.join(", ")]
           ],
           [
