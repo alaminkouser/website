@@ -1,6 +1,6 @@
 #let certificates-and-trainings(data, BODY) = {
   [
-    == Certificates & Trainings
+    = Certificates & Trainings
   ]
   for item in data.certificates_and_trainings [
     - #link(item.link)[*#item.name* \u{eb15}]

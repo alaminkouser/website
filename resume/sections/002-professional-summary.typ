@@ -1,6 +1,6 @@
 #let professional-summary(data, BODY) = {
   [
-    == Professional Summary
+    = Professional Summary
     #eval(data.professional_summary, mode: "markup")
   ]
   BODY

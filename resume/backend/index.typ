@@ -1,6 +1,6 @@
 #let backend(DOC) = {
   set document(
-    title: [AL AMIN KOUSER | RESUME],
+    title: [AL AMIN KOUSER],
     author: "AL AMIN KOUSER",
     description: "Resume of Al Amin Kouser.",
     keywords: ("resume", "cv", "curriculum vitae"),
@@ -16,10 +16,10 @@
     outline_setup
   }
 
-  show heading.where(level: 1): set text(size: 1.5em)
-  show heading.where(level: 1): set block(above: 0pt, below: 0.25em)
+  show title: set text(size: 1em)
+  show title: set block(above: 0pt, below: 0.25em)
 
-  show heading.where(level: 2): it => block(
+  show heading.where(level: 1): it => block(
     above: 1em,
     below: 1em,
   )[

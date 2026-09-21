@@ -1,6 +1,6 @@
 #let work-experiences(data, BODY) = {
   [
-    == Work Experiences
+    = Work Experiences
     #for experience in data.work_experiences [
       #text(weight: "bold")[#experience.title]
       ---

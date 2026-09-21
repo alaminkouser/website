@@ -1,6 +1,6 @@
 #let education(data, BODY) = {
   [
-    == Education
+    = Education
     #for item in data.education [
       #grid(
         columns: (1fr, auto),

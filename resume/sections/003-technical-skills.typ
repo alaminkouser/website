@@ -1,6 +1,6 @@
 #let technical-skills(data, BODY) = {
   [
-    == Technical Skills
+    = Technical Skills
     #for skill in data.technical_skills [
       #strong(skill.domain):
       #skill.items.join(", ")\

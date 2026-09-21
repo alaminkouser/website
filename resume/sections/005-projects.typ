@@ -1,6 +1,6 @@
 #let projects(data, BODY) = {
   [
-    == Projects
+    = Projects
     #for item in data.projects_and_open_source_contributions [
       #if item.hidden == false {
         grid(
