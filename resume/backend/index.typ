@@ -6,6 +6,7 @@
     keywords: ("resume", "cv", "curriculum vitae"),
     date: datetime.today(),
   )
+
   set page(
     paper: "a4",
     margin: 1.5cm,
@@ -31,7 +32,7 @@
         length: 100%,
         stroke: (
           thickness: 0.75pt,
-          paint: gradient.linear(gray, black),
+          paint: gradient.linear(white, black),
         ),
       ),
       text[#it.body],
@@ -39,7 +40,7 @@
         length: 100%,
         stroke: (
           thickness: 0.75pt,
-          paint: gradient.linear(black, gray),
+          paint: gradient.linear(black, white),
         ),
       ),
     )
