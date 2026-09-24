@@ -2,7 +2,7 @@
   let email = sys.inputs.at("AAK_EMAIL", default: "[AAK_EMAIL]")
   let phone = sys.inputs.at("AAK_PHONE", default: "[AAK_PHONE]")
   let profile = [
-    #title()
+    #link(data.website.url + "resume.pdf")[#title()]
     #text(data.title, size: 1.25em)\
     \u{f015} #data.address\
     #link("tel:" + phone)[\u{f095} #phone]\
