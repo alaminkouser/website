@@ -53,6 +53,7 @@ export async function buildSitemap(
   urlSet.add(`${normalizedSiteUrl}/status/`);
   urlSet.add(`${normalizedSiteUrl}/search/`);
   urlSet.add(`${normalizedSiteUrl}/privacy/`);
+  urlSet.add(`${normalizedSiteUrl}/resume.pdf`);
 
   const keywords = new Set<string>();
   for (const page of pages) {
